@@ -22,13 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const cookies = headers().get('cookie')
-  // Determine if the current path is part of the dashboard
 
   return (
     <html lang="en">
       <body className={inter.className}>
       <ContextProvider cookies={cookies}>
-          {/* Use the ConditionalNavbar to handle client-side logic */}
           <ConditionalNavbar />
           <main>{children}</main>
           <GoToTop />

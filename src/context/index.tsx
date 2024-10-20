@@ -7,18 +7,16 @@ import { mainnet } from '@reown/appkit/networks'
 import React, { type ReactNode } from 'react'
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
 
-// Set up queryClient
 const queryClient = new QueryClient()
 
 if (!projectId) {
   throw new Error('Project ID is not defined')
 }
 
-// Set up metadata
 const metadata = {
   name: 'next-reown-appkit',
   description: 'next-reown-appkit',
-  url: 'https://github.com/0xonerb/next-reown-appkit-ssr', // origin must match your domain & subdomain
+  url: 'https://github.com/0xonerb/next-reown-appkit-ssr',
   icons: ['https://avatars.githubusercontent.com/u/179229932']
 }
 
@@ -29,9 +27,9 @@ export const modal = createAppKit({
   networks,
   defaultNetwork: mainnet,
   metadata: metadata,
-  themeMode: 'light',
+  themeMode: 'dark',
   features: {
-    analytics: true // Optional - defaults to your Cloud configuration
+    analytics: true
   }
 })
 

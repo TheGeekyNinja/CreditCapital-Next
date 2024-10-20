@@ -5,10 +5,10 @@ import Image from 'next/image'; // For optimized image loading in Next.js
 import { ConnectButton } from './ConnectButton';
 
 const Navbar = () => {
-  // State to manage the sidebar's visibility
+
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
 
-  // Toggle function to open/close sidebar
+
   const toggleSidebar = () => setSidebarIsOpen(!sidebarIsOpen);
 
   return (
@@ -26,7 +26,7 @@ const Navbar = () => {
         </div>
         <div className="items-center gap-3 flex">
           <div className="py-2 px-4 rounded-full w-fit text-[#003366] text-xs sm:text-base">
-            {/* Assuming <w3m-button> is from a Web3 modal or similar package */}
+
             <w3m-button label="Login to start" />
           </div>
         </div>

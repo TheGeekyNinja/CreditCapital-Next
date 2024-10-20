@@ -6,7 +6,6 @@ const Home = () => {
 
   return (
     <>
-      {/* GoToTop component can be implemented separately */}
       <div className="bg-[#003366] p-5 banner-gradients pt-20">
         <div className="max-w-[100rem] mx-auto">
           {/* Section 1 */}
@@ -31,7 +30,7 @@ const Home = () => {
             <div className="w-full">
               <div className="relative md:w-fit w-80 mx-auto">
                 <Image
-                  className={styles.floatingPhone} // Use the correct className from the CSS module
+                  className={styles.floatingPhone}
                   src="/phone.png"
                   alt="Phone"
                   width={320}
