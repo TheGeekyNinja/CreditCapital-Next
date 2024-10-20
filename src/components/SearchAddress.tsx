@@ -1,7 +1,7 @@
 'use client'; // Ensure this component is rendered on the client-side
 
 import { useState, useCallback, useMemo } from 'react';
-import { useRouter } from 'next/navigation'; // Use next/navigation for routing in Next.js 13
+import { useRouter } from 'next/navigation';
 import { getAddress, isAddress } from 'viem';
 import { getEnsAddress } from '@wagmi/core';
 import { normalize } from 'viem/ens';
@@ -17,57 +17,54 @@ const SearchAddress: React.FC<SearchAddressProps> = ({ onSearch }) => {
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
 
-  const router = useRouter(); // Use useRouter from next/navigation
+  const router = useRouter();
 
-  const handleInputChange = useCallback(async () => {
-    setError(null);
-    setSuggestions([]);
+  const handleInputChange = useCallback(
+    async (inputValue: string) => {
+      setError(null);
+      setSuggestions([]);
 
-    console.log('Raw input:', searchAddress); // Debugging
-    console.log('Normalized ENS input:', normalize(searchAddress)); // Debugging
+      if (inputValue.includes('.eth')) {
+        try {
+          const resolvedAddress = await getEnsAddress(config, {
+            name: normalize(inputValue),
+          });
 
-    if (searchAddress.includes('.eth')) {
-      try {
-        const resolvedAddress = await getEnsAddress(config, {
-          name: normalize(searchAddress),
-        });
-
-        if (resolvedAddress) {
-          setSuggestions([resolvedAddress]);
-        } else {
-          setError('No ENS found.');
+          if (resolvedAddress) {
+            setSuggestions([resolvedAddress]);
+          } else {
+            setError('No ENS found.');
+          }
+        } catch (e) {
+          console.error('Failed to resolve ENS:', e);
+          setError('Error resolving ENS domain.');
         }
-      } catch (e) {
-        console.error('Failed to resolve ENS:', e);
-        setError('Error resolving ENS domain.');
+      } else if (isAddress(inputValue)) {
+        setSuggestions([getAddress(inputValue)]);
+      } else {
+        setError('Invalid address or ENS.');
       }
-    } else if (isAddress(searchAddress)) {
-      setSuggestions([getAddress(searchAddress)]);
-    } else {
-      setError('Invalid address or ENS.');
-    }
-  }, [searchAddress]);
+    },
+    []
+  );
 
-  // Memoize debounce handler
   const debouncedHandleInputChange = useMemo(
     () => debounce(handleInputChange, 500),
     [handleInputChange]
   );
 
-  // Handle input change event
   const handleInputChangeEvent = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchAddress(event.target.value);
-    debouncedHandleInputChange(); // Debounced execution
+    const inputValue = event.target.value;
+    setSearchAddress(inputValue);
+    debouncedHandleInputChange(inputValue);
   };
 
-  // Handle suggestion click
   const selectSuggestion = (suggestion: string) => {
     setSearchAddress(suggestion);
     setSuggestions([]);
     handleSearch();
   };
 
-  // Handle search action (on Enter or suggestion click)
   const handleSearch = () => {
     if (isAddress(searchAddress)) {
       const address = getAddress(searchAddress);
