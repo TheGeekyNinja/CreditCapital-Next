@@ -22,7 +22,7 @@ interface Coin {
   image: string;
 }
 
-const ABS_TOKEN_ADDRESS = '0x1cA9Fc98f3b997E08bC04691414e33B1835aa7e5' as const;
+const AGT_TOKEN_ADDRESS = '0x1cA9Fc98f3b997E08bC04691414e33B1835aa7e5' as const;
 
 interface WalletPageProps {
   params: {
@@ -45,7 +45,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
   const isSearchedWallet = walletAddress !== loggedInAddress;
 
   const [balance, setBalance] = useState<string | undefined>(undefined);
-  const [absBalance, setAbsBalance] = useState<string | undefined>(undefined);
+  const [agtBalance, setAgtBalance] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     const fetchBalance = async () => {
@@ -65,18 +65,18 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
     fetchBalance();
   }, [validWalletAddress]);
 
-  const { data: absBalanceData } = useReadContract({
-    address: ABS_TOKEN_ADDRESS,
+  const { data: agtBalanceData } = useReadContract({
+    address: AGT_TOKEN_ADDRESS,
     abi,
     functionName: 'balanceOf',
     args: [validWalletAddress as `0x${string}`],
   });
 
   useEffect(() => {
-    if (absBalanceData) {
-      setAbsBalance(absBalanceData.toString());
+    if (agtBalanceData) {
+      setAgtBalance(agtBalanceData.toString());
     }
-  }, [absBalanceData]);
+  }, [agtBalanceData]);
 
   const totalPortfolioValue = portfolioCoins
     .reduce((total, coin) => total + coin.current_price * coin.holdings, 0)
@@ -97,7 +97,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
           const maticCoin = data[0];
 
           const walletBalance = balance ? parseFloat(balance) : 0.0;
-          const absTokenBalance = absBalance ? parseFloat(formatUnits(BigInt(absBalance), 18)) : 0.0;
+          const agtTokenBalance = agtBalance ? parseFloat(formatUnits(BigInt(agtBalance), 18)) : 0.0;
 
           setPortfolioCoins([
             {
@@ -111,11 +111,11 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
                 maticCoin?.image || 'https://assets.coingecko.com/coins/images/4713/small/matic-token-icon.png',
             },
             {
-              id: 'abs',
-              name: 'ABS',
+              id: 'agt',
+              name: 'AGT',
               current_price: 0,
-              holdings: absTokenBalance,
-              symbol: 'ABS',
+              holdings: agtTokenBalance,
+              symbol: 'AGT',
               price_change_percentage_24h: 0,
               image: 'https://via.placeholder.com/40',
             },
@@ -128,7 +128,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
       };
 
       fetchAllCoins();
-    }, [walletAddress, balance, absBalance]);
+    }, [walletAddress, balance, agtBalance]);
 
   const handleWalletSearch = (newAddress: string) => {
     if (newAddress.startsWith('0x')) {
