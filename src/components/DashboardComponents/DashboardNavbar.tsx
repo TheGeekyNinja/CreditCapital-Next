@@ -7,9 +7,6 @@ const DashboardNavbar = () => {
       <Link href="/" className="px-4 py-2 bg-blue-500 text-white hover:bg-blue-600 transition-colors rounded-full">
         Home
       </Link>
-      <Link href="/" className="px-4 py-2 bg-blue-500 text-white hover:bg-blue-600 transition-colors rounded-full">
-        Home
-      </Link>
       <div className="flex items-center space-x-4">
         <ConnectButton />
       </div>
