@@ -180,12 +180,12 @@ const Home = () => {
                 determine the true worth of the assets.
               </p>
               <p className="text-[#003366] font-bold text-xl">
-                Gold-Spot-Price-Peg
+                Gold-Oz-Price-Peg
               </p>
               <p className="md:text-xl text-lg">
                 Through the proportion of the initial supply mint, and the
                 liquidity pool where Axos Gold Token is listed, a peg is
-                maintained between the price of AGT and the spot price of gold.
+                maintained between the price of AGT and the oz price of gold.
               </p>
             </div>
             <Image
@@ -234,7 +234,7 @@ const Home = () => {
                 USD Stablecoin Redemption Mechanism
               </p>
               <p>
-                Instead of dealing with a redeption process where you must take
+                Instead of dealing with a redemption process where you must take
                 delivery of actual gold, the liquidity pool allows you to sell
                 AGT for common stablecoins.
               </p>
@@ -517,7 +517,7 @@ const Home = () => {
                   </div>
                 </summary>
                 <p className="md:text-xl text-lg">
-                  The value of a token is linked to spot price of gold. If the
+                  The value of a token is linked to oz price of gold. If the
                   value of of gold drops significantly, AGT would likely reflect
                   that decrease. If the price drop is because of a
                   &quot;de-peg&quot;, the price of the toking moving too far
