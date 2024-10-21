@@ -23,7 +23,7 @@ interface Coin {
   image: string;
 }
 
-const AGT_TOKEN_ADDRESS = '0x1cA9Fc98f3b997E08bC04691414e33B1835aa7e5' as const;
+const AGT_TOKEN_ADDRESS = '0x53e30ec7039d6df4baf57cc6540558a0902d0026' as const;
 
 interface WalletPageProps {
   params: {
