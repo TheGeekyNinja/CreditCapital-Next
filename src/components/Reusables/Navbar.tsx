@@ -21,7 +21,7 @@ const Navbar = () => {
               src="/logo.png"
               className="xl:mr-10"
               alt="Logo"
-              width={100}
+              width={48}
               height={50}
             />
           </Link>
