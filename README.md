@@ -3,7 +3,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 
 To trigger a deployment on the main branch, use
-# yarn deploy
+# yarn deploydev
+
+To trigger a deployment on the main branch, use
+# yarn deployprod
 
 First, run the development server:
 
