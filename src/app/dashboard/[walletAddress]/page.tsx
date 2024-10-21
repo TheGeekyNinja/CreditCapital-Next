@@ -142,7 +142,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
         <div className="grid grid-cols-2 items-center">
           <div className="flex items-center">
             {isSearchedWallet ? (
-              <button onClick={() => router.back()} className="text-gray-800 text-2xl font-bold">
+              <button onClick={() => router.back()} className="text-2xl font-bold">
                 Go Back
               </button>
             ) : (
