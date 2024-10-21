@@ -2,6 +2,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+To trigger a deployment on the main branch, use
+# yarn deploy
+
 First, run the development server:
 
 ```bash
