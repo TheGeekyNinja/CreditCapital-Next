@@ -12,8 +12,8 @@ import { headers } from 'next/headers' // added
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'CreditCapital',
-  description: 'Powered by WalletConnect',
+  title: 'Axos Gold',
+  description: 'Axos Gold',
 };
 
 export default function RootLayout({

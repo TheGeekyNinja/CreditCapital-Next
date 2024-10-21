@@ -187,7 +187,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
 
         <div className="grid grid-cols-2 space-x-6">
           <div>
-            <h2 className="text-lg font-bold mb-4">{isSearchedWallet ? 'Portfolio' : 'My Portfolio'}</h2>
+            <h2 className="text-lg font-bold mb-4">Assets</h2>
             <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 mb-6">
               {portfolioCoins.map((coin) => (
                 <DashboardCard
@@ -205,7 +205,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
             </section>
           </div>
           <div>
-            <h2 className="text-lg font-bold mb-4">{isSearchedWallet ? 'Assets' : 'My Assets'}</h2>
+            <h2 className="text-lg font-bold mb-4">{isSearchedWallet ? 'Portfolio' : 'My Portfolio'}</h2>
             <section className="bg-white p-6 rounded-[20px] shadow-sm max-h-80 overflow-auto">
               {loadingPortfolio ? (
                 <div>Loading Assets...</div>
