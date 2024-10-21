@@ -1,23 +1,30 @@
-
 "use client";
 import Home from '@/components/Home';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useAppKitAccount } from "@reown/appkit/react";
-import { useRouter } from 'next/navigation';
-
+import { useRouter, usePathname } from 'next/navigation';
 
 const Page = () => {
   const { address, isConnected } = useAppKitAccount();
   const router = useRouter();
+  const pathname = usePathname(); // Get the current path
+
+  const [initialRender, setInitialRender] = useState(true);
+
   useEffect(() => {
-    console.log("Component mounted");
-    console.log("isConnected:", isConnected);
-  
-    if (isConnected) {
-      console.log("User is connected, redirecting...");
-      router.push(`/dashboard/${address}`);
+    if (initialRender) {
+      setInitialRender(false);
+      return;
     }
-  }, [address, router, isConnected]);
+    const hasRedirected = sessionStorage.getItem("hasRedirected");
+
+    if (isConnected && pathname === "/" && !hasRedirected) {
+      router.push(`/dashboard/${address}`);
+      sessionStorage.setItem("hasRedirected", "true");
+    }
+
+  }, [address, isConnected, router, pathname, initialRender]);
+
   return (
     <>
       <Home />

@@ -9,7 +9,7 @@ const Home = () => {
       <div className="bg-[#003366] p-5 banner-gradients pt-20">
         <div className="max-w-[100rem] mx-auto">
           {/* Section 1 */}
-          <div className="flex flex-col md:flex-row items-center gap-10">
+          <div className="flex flex-col md:flex-row items-center gap-10 mt-12">
             <div className="flex flex-col gap-8 w-full text-white">
               <p className="md:text-5xl text-4xl -mb-5">CreditCapital:</p>
               <p className="md:text-5xl text-4x text-[#c2c2c2]">

@@ -137,7 +137,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
   };
 
   return (
-    <div className="flex-1 bg-gray-100 overflow-hidden">
+    <div className="flex-1 bg-gray-100 h-screen">
       <section className="px-8 pt-8">
         <div className="grid grid-cols-2 items-center">
           <div className="flex items-center">

@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image'; // For optimized image loading in Next.js
-import { ConnectButton } from './ConnectButton';
+import { useState } from "react";
+import Image from "next/image"; // For optimized image loading in Next.js
+import { ConnectButton } from "./ConnectButton";
+import Link from "next/link";
+import { useAppKitAccount } from "@reown/appkit/react";
 
 const Navbar = () => {
-
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
-
-
+  const { address, isConnected } = useAppKitAccount();
   const toggleSidebar = () => setSidebarIsOpen(!sidebarIsOpen);
 
   return (
@@ -16,25 +16,41 @@ const Navbar = () => {
       {/* Desktop mode */}
       <div className="justify-between items-center max-w-[100rem] mx-auto flex">
         <div className="flex items-center gap-5">
-          <a href="#">
-            <Image src="/logo.png" className="xl:mr-10" alt="Logo" width={100} height={50} />
-          </a>
+          <Link href="/">
+            <Image
+              src="/logo.png"
+              className="xl:mr-10"
+              alt="Logo"
+              width={100}
+              height={50}
+            />
+          </Link>
 
-          <a href="#about">About</a>
-          <a href="#benefits">Benefits</a>
-          <a href="#faq">FAQ</a>
+          <Link href="#about">About</Link>
+          <Link href="#benefits">Benefits</Link>
+          <Link href="#faq">FAQ</Link>
         </div>
         <div className="items-center gap-3 flex">
           <div className="py-2 px-4 rounded-full w-fit text-[#003366] text-xs sm:text-base">
-
             <w3m-button label="Login to start" />
           </div>
+          {isConnected && (
+            <Link href={`/dashboard/${address}`} className="px-4 py-2 text-white">
+              Dashboard
+            </Link>
+          )}
         </div>
       </div>
 
       {/* Mobile mode */}
       <div className="justify-between items-center max-w-[100rem] mx-auto md:hidden flex">
-        <Image src="/logo.png" className="mr-10" alt="Logo" width={50} height={25} />
+        <Image
+          src="/logo.png"
+          className="mr-10"
+          alt="Logo"
+          width={50}
+          height={25}
+        />
         <svg
           className="h-8 w-8 text-white cursor-pointer"
           onClick={toggleSidebar}
@@ -44,7 +60,11 @@ const Navbar = () => {
           stroke="currentColor"
           strokeWidth={2}
         >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
         </svg>
       </div>
 
