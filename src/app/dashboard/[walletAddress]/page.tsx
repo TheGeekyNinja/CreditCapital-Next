@@ -11,6 +11,7 @@ import { useReadContract } from 'wagmi';
 import { formatUnits } from 'viem';
 import { config } from '@/config';
 import { abi } from '@/config/abi';
+import { formatCurrency } from '@/utils/formatter';
 
 interface Coin {
   id: string;
@@ -113,7 +114,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
             {
               id: 'agt',
               name: 'AGT',
-              current_price: 0,
+              current_price: 2735.20,
               holdings: agtTokenBalance,
               symbol: 'AGT',
               price_change_percentage_24h: 0,
@@ -167,7 +168,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
               <div>
                 <h1 className="text-3xl font-bold">Wallet</h1>
                 <p className="text-gray-500">Address: {walletAddress}</p>
-                <p className="text-gray-500">${totalPortfolioValue}</p>
+                <p className="text-gray-500 text-lg">Total Balance: ${totalPortfolioValue}</p>
                 {isSearchedWallet && (
                   <div className="mt-2 w-1/2">
                     <a
@@ -193,15 +194,10 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
                 <DashboardCard
                   key={coin.id}
                   title={coin.name}
-                  amount={coin.holdings.toFixed(3)}
+                  amount={formatCurrency(coin.current_price)}
                   image={coin.image}
                 />
-              ))}
-              <DashboardCard
-                title="Total Balance (USD)"
-                amount={`$${totalPortfolioValue}`}
-                image="https://via.placeholder.com/40"
-              />
+              ))} 
             </section>
           </div>
           <div>
@@ -214,7 +210,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
                   <PortfolioItem
                     key={coin.id}
                     name={coin.name}
-                    amount={`$${coin.current_price.toFixed(2)}`}
+                    amount={`${formatCurrency(coin.current_price * coin.holdings)}`}
                     percentage={`${coin.price_change_percentage_24h.toFixed(2)}%`}
                     quantity={`${coin.holdings.toFixed(3)} ${coin.symbol.toUpperCase()}`}
                     image={coin.image}
