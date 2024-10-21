@@ -212,7 +212,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
                     name={coin.name}
                     amount={`${formatCurrency(coin.current_price * coin.holdings)}`}
                     percentage={`${coin.price_change_percentage_24h.toFixed(2)}%`}
-                    quantity={`${coin.holdings.toFixed(3)} ${coin.symbol.toUpperCase()}`}
+                    quantity={`${coin.holdings.toFixed(2)} ${coin.symbol.toUpperCase()}`}
                     image={coin.image}
                   />
                 ))
