@@ -1,9 +1,11 @@
-import { ArrowSmallRightIcon, ArrowDownIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowSmallRightIcon,
+  ArrowDownIcon,
+} from "@heroicons/react/24/outline";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 
 const Home = () => {
-
   return (
     <>
       <div className="bg-[#003366] p-5 banner-gradients pt-20">
@@ -11,12 +13,12 @@ const Home = () => {
           {/* Section 1 */}
           <div className="flex flex-col md:flex-row items-center gap-10 mt-12">
             <div className="flex flex-col gap-8 w-full text-white">
-              <p className="md:text-5xl text-4xl -mb-5">CreditCapital:</p>
+              <p className="md:text-5xl text-4xl -mb-5">Axos Gold:</p>
               <p className="md:text-5xl text-4x text-[#c2c2c2]">
-                Unleashing Liquidity, Empowering Token Holders
+                Unleashing Gold Liquidity, Empowering Token Holders
               </p>
               <p className="md:text-2xl text-lg">
-                Transforming Large-scale Capital Investments Through Tokenization.
+                Transforming Large-scale Metal Reserves Through Tokenization
               </p>
               <div className="flex gap-3 items-center">
                 <a
@@ -36,7 +38,9 @@ const Home = () => {
                   width={320}
                   height={640}
                 />
-                <div className={`${styles.floatShadow} h-2 blur-md my-5 mx-auto rounded-full`}></div>
+                <div
+                  className={`${styles.floatShadow} h-2 blur-md my-5 mx-auto rounded-full`}
+                ></div>
               </div>
             </div>
           </div>
@@ -49,7 +53,7 @@ const Home = () => {
           <div className="flex flex-col md:flex-row items-center gap-10 shadow-lg rounded-xl">
             <div className="flex flex-col gap-5 w-full p-5">
               <p className="md:text-3xl text-2xl text-[#003366]">
-                An ecosystem where large-scale capital investments like bonds
+                An ecosystem where large-scale metal reserves like gold mines
                 become liquid and accessible to a wider audience, facilitated by
                 blockchain technology.
               </p>
@@ -69,7 +73,7 @@ const Home = () => {
       <div className="px-5 py-20">
         <div className="max-w-[50rem] mx-auto text-center">
           <p className="md:text-5xl text-4xl text-[#003366]">
-            About the Axos Token
+            About the Axos Gold Token
           </p>
           <div className="flex sm:flex-row flex-col gap-5 my-20">
             <div className="flex flex-col gap-5 w-full p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
@@ -82,9 +86,9 @@ const Home = () => {
               />
               <p className="text-[#003366] font-semibold text-xl">Equity</p>
               <p>
-                Holding CreditCapital&apos;s security tokens means owning equity
-                rights and distribution benefits, allowing direct participation
-                in our growing venture.
+                Holding Axos Gold&apos;s security tokens means owning an
+                overcollateralized gold derivative, allowing secure exposure to
+                the price of gold.
               </p>
             </div>
             <div className="flex flex-col gap-5 w-full p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
@@ -100,9 +104,25 @@ const Home = () => {
               </p>
               <p>
                 Our tokens represent the key to true ownership. Backed by
-                tangible assets and governed by white-listed investor
-                regulations, they reflect the true blend of digital currencies
-                with traditional investments.
+                tangible gold and governed by white-listed investor regulations,
+                they reflect the true blend of digital currencies with
+                traditional investments.
+              </p>
+            </div>
+            <div className="flex flex-col gap-5 w-full p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
+              <Image
+                src="/chart_icon_blue.png"
+                className="h-40 w-fit mx-auto"
+                alt="Security Token"
+                width={160}
+                height={160}
+              />
+              <p className="text-[#003366] font-semibold text-xl">
+                Commodity Peg
+              </p>
+              <p>
+                Our gold reserves are tokenized at a one-to-one ratio, so that
+                one token is equivalent to one oz of gold.
               </p>
             </div>
           </div>
@@ -122,13 +142,15 @@ const Home = () => {
             <div className="flex flex-col gap-5 w-full">
               <p className="md:text-5xl text-4xl text-[#003366]">The Problem</p>
               <p className="text-[#003366] font-bold text-xl">
-                Illiquidity in Large-Scale Investments
+                Illiquidity of Gold Reserves
               </p>
               <p className="md:text-xl text-lg">
-                Large-scale capital investments face inherent challenges.
-                Finding appropriate buyers and sellers becomes increasingly
-                complex as transaction sizes grow, often leading to undesirable
-                liquidity discounts.
+                Illiquidity in Large-Scale Investments: Unmined precious metal
+                investments face inherent challenges. Extracting resources like
+                these from their sites is expensive, and impacts the
+                environment. Not to mention the cost and logistics of storing
+                gold in a vault or taking delivery of it, which often leads to
+                undesirable liquidity discounts.
               </p>
               <p className="text-[#003366] font-bold text-xl">
                 Disproportional Value Loss
@@ -158,12 +180,12 @@ const Home = () => {
                 determine the true worth of the assets.
               </p>
               <p className="text-[#003366] font-bold text-xl">
-                True Market Value
+                Gold-Spot-Price-Peg
               </p>
               <p className="md:text-xl text-lg">
-                If a recurring revenue asset proves valuable, its tokens meet
-                their genuine market value, eliminating the detrimental effects
-                of illiquidity.
+                Through the proportion of the initial supply mint, and the
+                liquidity pool where Axos Gold Token is listed, a peg is
+                maintained between the price of AGT and the spot price of gold.
               </p>
             </div>
             <Image
@@ -209,11 +231,12 @@ const Home = () => {
                 height={160}
               />
               <p className="text-[#53a9ff] font-semibold text-xl">
-                Recurring Revenue
+                USD Stablecoin Redemption Mechanism
               </p>
               <p>
-                Our unique model empowers individuals with the opportunity to
-                earn recurring revenue.
+                Instead of dealing with a redeption process where you must take
+                delivery of actual gold, the liquidity pool allows you to sell
+                AGT for common stablecoins.
               </p>
             </div>
             <div className="flex flex-col gap-5">
@@ -225,11 +248,13 @@ const Home = () => {
                 height={160}
               />
               <p className="text-[#53a9ff] font-semibold text-xl">
-                Securitized Asset Value
+                Overcollateralization
               </p>
               <p>
-                The combination of market value and a dividend value gives our
-                securitized assets a unique and realistic valuation.
+                The amounts of actual gold backing your tokens are many times
+                higher than the total token supply. Since the gold reserves in
+                the mine have been appraised with a discounted cash flow (DCF)
+                at a 90% rate, AGT is heavily overcollateralized.
               </p>
             </div>
           </div>
@@ -248,29 +273,29 @@ const Home = () => {
           </p>
           <br />
           <p className="text-center">
-            You, as an asset owner, bring your assets to Credit Capital. We take
-            over from there, tokenizing your assets and issuing you an
-            equivalent number of tokens.
+            You, as an gold reserves owner, bring your assets to Axos Gold. We
+            take over from there, tokenizing your gold and issuing you 10% of
+            the that value in tokens.
           </p>
           <br />
           <div className="flex flex-col sm:flex-row gap-10 items-center">
             <div className="sm:text-right w-full">
               <div className="p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
                 <p className="text-[#003366] font-bold text-xl">
-                  Asset Introduction
+                  Reserve Introduction
                 </p>
                 <p className="md:text-xl text-lg">
-                  Your journey begins with introducing your assets to
-                  CreditCapital. As an asset owner, you will need to provide
-                  detailed information about your capital investment, such as
-                  the type of asset, its current value, and its
-                  revenue-generating history, if applicable.
+                  Your journey begins with introducing your assets to Axos Gold.
+                  As an asset owner, you will need to provide detailed
+                  information about your capital investment, cost-to-operate,
+                  potential difficulties with commencing operations in it, and
+                  any past appraisals.
                 </p>
               </div>
               <br />
               <div className="p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
                 <p className="text-[#003366] font-bold text-xl">
-                  Asset Evaluation
+                  Reserve Evaluation
                 </p>
                 <p className="md:text-xl text-lg">
                   Our team of seasoned finance and blockchain professionals will
@@ -286,9 +311,9 @@ const Home = () => {
                 <p className="md:text-xl text-lg">
                   Once your asset meets our evaluation criteria, we will move
                   forward with the tokenization process. This involves digitally
-                  representing your asset as security tokens on the blockchain.
+                  representing your asset as commodity tokens on the blockchain.
                   Each token will embody a proportional ownership stake in your
-                  asset, thus democratizing access to your capital investment.
+                  asset, thus democratizing access to the reserves.
                 </p>
               </div>
             </div>
@@ -308,9 +333,9 @@ const Home = () => {
                 </p>
                 <p className="md:text-xl text-lg">
                   After successful tokenization, you will be issued tokens
-                  equivalent to the value of your asset. You become the rightful
-                  owner of these tokens and can choose to keep them to earn
-                  revenue or trade them through a liquidity pool pair.
+                  equivalent to the DCF value of your gold reserve. You become
+                  the rightful owner of these tokens and can choose to trade or
+                  stake them in our liquidity pool.
                 </p>
               </div>
               <br />
@@ -319,11 +344,11 @@ const Home = () => {
                   Asset Management
                 </p>
                 <p className="md:text-xl text-lg">
-                  As your asset is now part of the CreditCapital ecosystem, our
+                  As your asset is now part of the Axos Gold ecosystem, our
                   expert team will oversee its management. This includes
                   monitoring the performance of the tokenized asset, managing
                   the liquidity pool, and ensuring timely revenue distribution
-                  among token holders.
+                  among token holders
                 </p>
               </div>
               <br />
@@ -342,7 +367,7 @@ const Home = () => {
           </div>
           <br />
           <p className="text-center">
-            By tokenizing your assets with CreditCapital, you&apos;re not only
+            By tokenizing your assets with Axos Gold, you&apos;re not only
             enhancing your asset&apos;s liquidity but also opening up new
             avenues for revenue generation and expanding the potential investor
             pool. This ultimately leads to a better valuation of your asset and
@@ -403,211 +428,221 @@ const Home = () => {
                 1
               </div>
               <details className="w-full">
-                <summary
-                  className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3"
-            >
-              <p>How exactly does tokenization work?</p>
+                <summary className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3">
+                  <p>How exactly does tokenization work?</p>
                   <div className="expand-arrow rounded-full p-1">
                     <ArrowDownIcon className="h-5 w-5" />
                   </div>
                 </summary>
                 <p className="md:text-xl text-lg">
-                  Tokenization involves transforming the value of an asset into a format that can be
-                  represented digitally. With CreditCapital, assets are converted into security tokens
-                  that represent equivalent ownership stakes.
-            </p>
-          </details>
+                  Tokenization involves transforming the value of an asset into
+                  a format that can be represented digitally. With AxosGold,
+                  assets are converted into security tokens that represent
+                  equivalent ownership stakes.
+                </p>
+              </details>
             </div>
             <div className="flex gap-3 items-start">
               <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">
                 2
               </div>
               <details className="w-full">
-                <summary
-                  className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3"
-                >
+                <summary className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3">
                   <p>What is the criteria for asset tokenization?</p>
                   <div className="expand-arrow rounded-full p-1">
                     <ArrowDownIcon className="h-5 w-5" />
                   </div>
                 </summary>
                 <p className="md:text-xl text-lg">
-                  While the specific criteria can vary, typically, any asset with
-                  demonstrable value can be tokenized. Credit Capital focuses
-                  primarily on large-scale capital investments like bonds. For
-                  detailed criteria, you should contact Capital Alliance directly.
-                  Note that Credit Capital also allows participation through OTC
-                  trades of normal crypto.
-            </p>
-          </details>
+                  While the specific criteria can vary, typically, any asset
+                  with demonstrable value can be tokenized. Axos Gold
+                  focuses primarily on large-scale capital investments like
+                  bonds. For detailed criteria, you should contact Capital
+                  Alliance directly. Note that Axos Gold also allows
+                  participation through OTC trades of normal crypto.
+                </p>
+              </details>
             </div>
             <div className="flex gap-3 items-start">
               <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">
                 3
               </div>
               <details className="w-full">
-                <summary
-                  className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3"
-                >
+                <summary className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3">
                   <p>What are the risks involved?</p>
-              <div className="expand-arrow rounded-full p-1">
-                <ArrowDownIcon className="h-5 w-5" />
-              </div>
+                  <div className="expand-arrow rounded-full p-1">
+                    <ArrowDownIcon className="h-5 w-5" />
+                  </div>
                 </summary>
                 <p className="md:text-xl text-lg">
-                  Like any investment, tokenization involves risks, such as market
-                  volatility influencing token value. However, Capital Alliance
+                  Like any investment, tokenization involves risks, such as
+                  market volatility influencing token value. However, Axos Gold
                   mitigates these risks with a robust bond guarantee system
                   backed by a fund of tokens, ensuring smooth operations and
                   securing investor interests.
-            </p>
-          </details>
+                </p>
+              </details>
             </div>
             <div className="flex gap-3 items-start">
               <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">
                 4
               </div>
               <details className="w-full">
-                <summary
-                  className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3"
-                >
+                <summary className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3">
                   <p>What is a white-listed investor?</p>
-              <div className="expand-arrow rounded-full p-1">
-                <ArrowDownIcon className="h-5 w-5" />
+                  <div className="expand-arrow rounded-full p-1">
+                    <ArrowDownIcon className="h-5 w-5" />
+                  </div>
+                </summary>
+                <p className="md:text-xl text-lg">
+                  A white-listed investor is a verified investor who has
+                  completed industry-standard Know Your Customer (KYC)
+                  procedures, which helps prevent fraud and ensures compliance
+                  with regulations.
+                </p>
+              </details>
+            </div>
+            <div className="flex gap-3 items-start">
+              <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">
+                5
               </div>
-            </summary>
-            <p className="md:text-xl text-lg">
-              A white-listed investor is a verified investor who has completed industry-standard
-              Know Your Customer (KYC) procedures, which helps prevent fraud and ensures compliance
-              with regulations.
-            </p>
-          </details>
-        </div>
-        <div className="flex gap-3 items-start">
-          <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">5</div>
-          <details className="w-full">
-            <summary
-              className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3"
-            >
-              <p>What happens if the value of the tokenized asset drops significantly?</p>
-              <div className="expand-arrow rounded-full p-1">
-                <ArrowDownIcon className="h-5 w-5" />
+              <details className="w-full">
+                <summary className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3">
+                  <p>
+                    What happens if the value of the tokenized asset drops
+                    significantly?
+                  </p>
+                  <div className="expand-arrow rounded-full p-1">
+                    <ArrowDownIcon className="h-5 w-5" />
+                  </div>
+                </summary>
+                <p className="md:text-xl text-lg">
+                  The value of a token is linked to spot price of gold. If the
+                  value of of gold drops significantly, AGT would likely reflect
+                  that decrease. If the price drop is because of a
+                  &quot;de-peg&quot;, the price of the toking moving too far
+                  away from the gold price, that&apos;s when Axos Gold would
+                  automatically trade the pair using our cash-on-hand, to bring
+                  it back into sync. Our systems have threshholds set for this,
+                  such that the price is allowed to de-peg only very slightly,
+                  but would be prevented from diverging drastically.
+                </p>
+              </details>
+            </div>
+            <div className="flex gap-3 items-start">
+              <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">
+                6
               </div>
-            </summary>
-            <p className="md:text-xl text-lg">
-              The value of a token is linked to the asset it represents. If the value of the asset
-              drops significantly, the token&apos;s value would likely reflect that decrease. However,
-              Capital Alliance&apos;s model provides a measure of protection, with token holders also
-              benefiting from potential recurring revenue streams from the staked tokens.
-            </p>
-          </details>
-        </div>
-        <div className="flex gap-3 items-start">
-          <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">6</div>
-          <details className="w-full">
-            <summary
-              className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3"
-            >
-              <p>How does vesting work?</p>
-              <div className="expand-arrow rounded-full p-1">
-                <ArrowDownIcon className="h-5 w-5" />
+              <details className="w-full">
+                <summary className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3">
+                  <p>How does vesting work?</p>
+                  <div className="expand-arrow rounded-full p-1">
+                    <ArrowDownIcon className="h-5 w-5" />
+                  </div>
+                </summary>
+                <p className="md:text-xl text-lg">
+                  When you receive minted tokens from the protocol, they will
+                  have a lock timer on them, which prevents you from
+                  transferring out of your wallet. You can still earn revenue
+                  from them during this time, you just can&apos;t transfer them.
+                  As the timer ticks down, they will progressively unlock for
+                  normal use, and you&apos;ll be able to trade with them on the
+                  LP.
+                </p>
+              </details>
+            </div>
+            <div className="flex gap-3 items-start">
+              <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">
+                7
               </div>
-            </summary>
-            <p className="md:text-xl text-lg">
-              When you receive minted tokens from the protocol, they will have a vesting timer on them, which keeps
-              them locked in your wallet. You can still earn revenue from them during this time, 
-              you just can&apos;t transfer them. As the timer ticks down, they will progressively unlock
-              for normal use.
-            </p>
-          </details>
-        </div>
-        <div className="flex gap-3 items-start">
-          <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">7</div>
-          <details className="w-full">
-            <summary
-              className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3"
-            >
-              <p>What is the legal standing of owning tokens?</p>
-              <div className="expand-arrow rounded-full p-1">
-                <ArrowDownIcon className="h-5 w-5" />
+              <details className="w-full">
+                <summary className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3">
+                  <p>What is the legal standing of owning tokens?</p>
+                  <div className="expand-arrow rounded-full p-1">
+                    <ArrowDownIcon className="h-5 w-5" />
+                  </div>
+                </summary>
+                <p className="md:text-xl text-lg">
+                  Axos Gold&apos;s tokens represent equity ownership in the
+                  company, held by a licensed Trust Company as a fiduciary on
+                  behalf of token holders. Therefore, token holders have legal
+                  rights akin to shareholders, such as voting rights and revenue
+                  distribution rights.
+                </p>
+              </details>
+            </div>
+            <div className="flex gap-3 items-start">
+              <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">
+                8
               </div>
-            </summary>
-            <p className="md:text-xl text-lg">
-              Credit Capital&apos;s tokens represent equity ownership in the company, held by a licensed
-              Trust Company as a fiduciary on behalf of token holders. Therefore, token holders have
-              legal rights akin to shareholders, such as voting rights and revenue distribution
-              rights.
-            </p>
-          </details>
-        </div>
-        <div className="flex gap-3 items-start">
-          <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">8</div>
-          <details className="w-full">
-            <summary
-              className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3"
-            >
-              <p>
-                What is the taxation situation for profits earned through holding or selling tokens?
-              </p>
-              <div className="expand-arrow rounded-full p-1">
-                <ArrowDownIcon className="h-5 w-5" />
+              <details className="w-full">
+                <summary className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3">
+                  <p>
+                    What is the taxation situation for profits earned through
+                    holding or selling tokens?
+                  </p>
+                  <div className="expand-arrow rounded-full p-1">
+                    <ArrowDownIcon className="h-5 w-5" />
+                  </div>
+                </summary>
+                <p className="md:text-xl text-lg">
+                  As with most investments, profits from holding or selling
+                  tokens are likely to be subject to tax laws. The exact tax
+                  implications depend on jurisdiction and individual
+                  circumstances. With Axos Gold&apos;s system, tax events may be
+                  deferred until users withdraw their dividends (though this
+                  will be dependent on local laws), giving token holders control
+                  over the timing of their tax obligations.
+                </p>
+              </details>
+            </div>
+            <div className="flex gap-3 items-start">
+              <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">
+                9
               </div>
-            </summary>
-            <p className="md:text-xl text-lg">
-              As with most investments, profits from holding or selling tokens are likely to be
-              subject to tax laws. The exact tax implications depend on jurisdiction and individual
-              circumstances. With CreditCapital&apos;s system, tax events may be deferred until users
-              withdraw their dividends (though this will be dependent on local laws), giving token
-              holders control over the timing of their tax obligations.
-            </p>
-          </details>
-        </div>
-        <div className="flex gap-3 items-start">
-          <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">9</div>
-          <details className="w-full">
-            <summary
-              className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3"
-            >
-              <p>How liquid are the tokens?</p>
-              <div className="expand-arrow rounded-full p-1">
-                <ArrowDownIcon className="h-5 w-5" />
+              <details className="w-full">
+                <summary className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3">
+                  <p>How liquid are the tokens?</p>
+                  <div className="expand-arrow rounded-full p-1">
+                    <ArrowDownIcon className="h-5 w-5" />
+                  </div>
+                </summary>
+                <p className="md:text-xl text-lg">
+                  Axos Gold&apos;s model aims to increase the liquidity of
+                  tokens by funding liquidity pools on popular exchanges. Since
+                  there is an incentive to hold AGT: the revenue distribution,
+                  this incentivizes activity on those pairs also. These
+                  conditions ensure a liquid market for Axos Gold.
+                </p>
+              </details>
+            </div>
+            <div className="flex gap-3 items-start">
+              <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">
+                10
               </div>
-            </summary>
-            <p className="md:text-xl text-lg">
-              Credit Capital&apos;s model aims to increase the liquidity of tokens by funding liquidity
-              pools on popular exchanges. Since there is an incentive to hold Axos tokens: the revenue
-              distribution, activity on those pairs is also incentivized. These conditions ensure a liquid
-              market for Axos.
-            </p>
-          </details>
-        </div>
-        <div className="flex gap-3 items-start">
-          <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">
-            10
+              <details className="w-full">
+                <summary className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3">
+                  <p>
+                    What is the technical infrastructure supporting the
+                    tokenization and trading process?
+                  </p>
+                  <div className="expand-arrow rounded-full p-1">
+                    <ArrowDownIcon className="h-5 w-5" />
+                  </div>
+                </summary>
+                <p className="md:text-xl text-lg">
+                  Axos Gold deployed AGT as an ERC-20 token on the Polygon
+                  blockchain, renowned for its robustness and security. The
+                  platform ensures compliance through an address whitelist, and
+                  dividends are managed and allocated through smart contracts.
+                  The tokens are listed on Uniswap, the largest decentralized
+                  exchange currently in operation on Polygon.
+                </p>
+              </details>
+            </div>
           </div>
-          <details className="w-full">
-            <summary
-              className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3"
-            >
-              <p>
-                What is the technical infrastructure supporting the tokenization and trading
-                process?
-              </p>
-              <div className="expand-arrow rounded-full p-1">
-                <ArrowDownIcon className="h-5 w-5" />
-              </div>
-            </summary>
-            <p className="md:text-xl text-lg">
-              Credit Capital deploys ERC-3643 (“T-REX”) compliant security tokens on the Polygon
-              or Ethereum blockchain, both renowned for their robustness and security. The platform
-              ensures compliance through industry-standard KYC requirements, and dividends are
-              managed and allocated through smart contracts.
-            </p>
-          </details>
         </div>
       </div>
-    </div>
-  </div>
     </>
   );
 };
