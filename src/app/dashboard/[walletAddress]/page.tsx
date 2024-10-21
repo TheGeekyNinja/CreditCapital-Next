@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation'; // Using next/navigation
-import DashboardCard from '@/components/DashboardCard';
-import SearchAddress from '@/components/SearchAddress';
-import PortfolioItem from '@/components/PortfolioItem';
+import DashboardCard from '@/components/DashboardComponents/DashboardCard';
+import SearchAddress from '@/components/Reusables/SearchAddress';
+import PortfolioItem from '@/components/DashboardComponents/PortfolioItem';
 import Image from 'next/image';
 import { getBalance, getAccount } from '@wagmi/core';
 import { useReadContract } from 'wagmi';

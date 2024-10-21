@@ -1,4 +1,4 @@
-import { ConnectButton } from "./ConnectButton";
+import { ConnectButton } from "../Reusables/ConnectButton";
 import Link from 'next/link';
 
 const DashboardNavbar = () => {

@@ -1,7 +1,7 @@
 'use client';
 
-import Navbar from '@/components/Navbar';
-import DashboardNavbar from '@/components/DashboardNavbar';
+import Navbar from '@/components/Reusables/Navbar';
+import DashboardNavbar from '@/components/DashboardComponents/DashboardNavbar';
 import { usePathname } from 'next/navigation';
 
 const ConditionalNavbar = () => {

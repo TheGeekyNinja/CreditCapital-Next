@@ -2,8 +2,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Footer from '@/components/Footer';
-import GoToTop from '@/components/GoToTop';
+import Footer from '@/components/Reusables/Footer';
+import GoToTop from '@/components/Reusables/GoToTop';
 import ConditionalNavbar from '@/components/ConditionalNavbar';
 import ContextProvider from '@/context';
 import { headers } from 'next/headers' // added
