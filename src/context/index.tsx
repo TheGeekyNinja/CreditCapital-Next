@@ -12,6 +12,7 @@ const queryClient = new QueryClient()
 if (!projectId) {
   throw new Error('Project ID is not defined')
 }
+console.log("Project ID: ", projectId)
 
 const metadata = {
   name: 'next-reown-appkit',
