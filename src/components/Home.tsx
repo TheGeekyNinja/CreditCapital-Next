@@ -8,7 +8,7 @@ import styles from "@/styles/Home.module.css";
 const Home = () => {
   return (
     <>
-      <div className="bg-[#003366] p-5 banner-gradients pt-20">
+      <div className={`${styles["banner-gradients"]} p-5 pt-20`}>
         <div className="max-w-[100rem] mx-auto">
           {/* Section 1 */}
           <div className="flex flex-col md:flex-row items-center gap-10 mt-12">
@@ -455,11 +455,11 @@ const Home = () => {
                 </summary>
                 <p className="md:text-xl text-lg">
                   While the specific criteria can vary, typically, any asset
-                  with demonstrable value can be tokenized. Axos Gold
-                  focuses primarily on large-scale capital investments like
-                  bonds. For detailed criteria, you should contact Capital
-                  Alliance directly. Note that Axos Gold also allows
-                  participation through OTC trades of normal crypto.
+                  with demonstrable value can be tokenized. Axos Gold focuses
+                  primarily on large-scale capital investments like bonds. For
+                  detailed criteria, you should contact Capital Alliance
+                  directly. Note that Axos Gold also allows participation
+                  through OTC trades of normal crypto.
                 </p>
               </details>
             </div>
