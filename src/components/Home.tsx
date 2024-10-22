@@ -272,8 +272,8 @@ const Home = () => {
               </p>
               <p>
                 1% of the value of the assets under management by Axos Gold (our gold reserves)
-                is dispensed as ETH to token holders. This is done proportionally based on what
-                percentage of the total circulating supply you hold, and is dispensed on a weekly basis.
+                is dispensed as ETH to all token holders. This is done proportionally, based on what
+                percentage of the total circulating supply you hold, and is dispensed on a monthly basis.
               </p>
             </div>
           </div>
