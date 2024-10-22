@@ -1,17 +1,16 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation'; // Using next/navigation
-import DashboardCard from '@/components/DashboardComponents/DashboardCard';
-import SearchAddress from '@/components/Reusables/SearchAddress';
-import PortfolioItem from '@/components/DashboardComponents/PortfolioItem';
-import Image from 'next/image';
-import { getBalance, getAccount } from '@wagmi/core';
-import { useReadContract } from 'wagmi';
-import { formatUnits } from 'viem';
-import { config } from '@/config';
-import { abi } from '@/config/abi';
-import { formatCurrency } from '@/utils/formatter';
+"use client";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation"; // Using next/navigation
+import DashboardCard from "@/components/DashboardComponents/DashboardCard";
+import SearchAddress from "@/components/Reusables/SearchAddress";
+import PortfolioItem from "@/components/DashboardComponents/PortfolioItem";
+import Image from "next/image";
+import { getBalance, getAccount } from "@wagmi/core";
+import { useReadContract } from "wagmi";
+import { formatUnits } from "viem";
+import { config } from "@/config";
+import { abi } from "@/config/abi";
+import { formatCurrency } from "@/utils/formatter";
 
 interface Coin {
   id: string;
@@ -23,13 +22,12 @@ interface Coin {
   image: string;
 }
 
-const AGT_TOKEN_ADDRESS = '0x53e30ec7039d6df4baf57cc6540558a0902d0026' as const;
-
 interface WalletPageProps {
   params: {
     walletAddress: string;
   };
 }
+
 const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
   const router = useRouter();
   const walletAddress = params.walletAddress;
@@ -39,7 +37,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
   const { address: loggedInAddress } = getAccount(config);
 
   const validWalletAddress =
-    typeof walletAddress === 'string' && walletAddress.startsWith('0x')
+    typeof walletAddress === "string" && walletAddress.startsWith("0x")
       ? walletAddress
       : undefined;
 
@@ -47,6 +45,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
 
   const [balance, setBalance] = useState<string | undefined>(undefined);
   const [agtBalance, setAgtBalance] = useState<string | undefined>(undefined);
+  const [agtPrice, setAgtPrice] = useState<number>(0);
 
   useEffect(() => {
     const fetchBalance = async () => {
@@ -56,83 +55,109 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
             address: validWalletAddress as `0x${string}`,
             chainId: 137,
           });
-          setBalance(result?.formatted || '0');
+          setBalance(result?.formatted || "0");
         }
       } catch (error) {
-        console.error('Error fetching wallet balance:', error);
+        console.error("Error fetching wallet balance:", error);
       }
     };
 
     fetchBalance();
   }, [validWalletAddress]);
 
+  // Fetch AGT token balance
   const { data: agtBalanceData } = useReadContract({
-    address: AGT_TOKEN_ADDRESS,
+    address: process.env.AGT_TOKEN_ADDRESS as `0x${string}`,
     abi,
-    functionName: 'balanceOf',
+    functionName: "balanceOf",
     args: [validWalletAddress as `0x${string}`],
   });
 
   useEffect(() => {
     if (agtBalanceData) {
+      console.log("AGT Balance Data:", agtBalanceData);
       setAgtBalance(agtBalanceData.toString());
     }
   }, [agtBalanceData]);
+
+  useEffect(() => {
+    const fetchGoldPrice = async () => {
+      try {
+        const response = await fetch("/api/gold");
+        if (!response.ok) {
+          throw new Error("Failed to fetch gold price");
+        }
+        const data = await response.json();
+        console.log("Gold Price Data:", data);
+        setAgtPrice(data.price);
+      } catch (error) {
+        console.error("Error fetching gold price:", error);
+      }
+    };
+
+    fetchGoldPrice();
+  }, []);
 
   const totalPortfolioValue = portfolioCoins
     .reduce((total, coin) => total + coin.current_price * coin.holdings, 0)
     .toFixed(2);
 
-    useEffect(() => {
-      const fetchAllCoins = async () => {
-        try {
-          const response = await fetch('/api/coins', {
-            method: 'GET',
-          });
+  useEffect(() => {
+    const fetchAllCoins = async () => {
+      try {
+        const response = await fetch("/api/coins", {
+          method: "GET",
+        });
 
-          if (!response.ok) {
-            throw new Error('Failed to fetch coin data');
-          }
-
-          const data = await response.json();
-          const maticCoin = data[0];
-
-          const walletBalance = balance ? parseFloat(balance) : 0.0;
-          const agtTokenBalance = agtBalance ? parseFloat(formatUnits(BigInt(agtBalance), 18)) : 0.0;
-
-          setPortfolioCoins([
-            {
-              id: maticCoin?.id || 'matic-network',
-              name: maticCoin?.name || 'Polygon',
-              current_price: maticCoin?.current_price || 0,
-              holdings: walletBalance,
-              symbol: 'MATIC',
-              price_change_percentage_24h: maticCoin?.price_change_percentage_24h || 0,
-              image:
-                maticCoin?.image || 'https://assets.coingecko.com/coins/images/4713/small/matic-token-icon.png',
-            },
-            {
-              id: 'agt',
-              name: 'AGT',
-              current_price: 2735.20,
-              holdings: agtTokenBalance,
-              symbol: 'AGT',
-              price_change_percentage_24h: 0,
-              image: 'https://via.placeholder.com/40',
-            },
-          ]);
-        } catch (error) {
-          console.error('Error fetching coin data:', error);
-        } finally {
-          setLoadingPortfolio(false);
+        if (!response.ok) {
+          throw new Error("Failed to fetch coin data");
         }
-      };
 
-      fetchAllCoins();
-    }, [walletAddress, balance, agtBalance]);
+        const data = await response.json();
+        const maticCoin = data[0];
+
+        const walletBalance = balance ? parseFloat(balance) : 0.0;
+        const agtTokenBalance = agtBalance
+          ? parseFloat(formatUnits(BigInt(agtBalance), 18))
+          : 0.0;
+
+        console.log("Formatted AGT Token Balance:", agtTokenBalance);
+
+        setPortfolioCoins([
+          {
+            id: maticCoin?.id || "matic-network",
+            name: maticCoin?.name || "Polygon",
+            current_price: maticCoin?.current_price || 0,
+            holdings: walletBalance,
+            symbol: "MATIC",
+            price_change_percentage_24h:
+              maticCoin?.price_change_percentage_24h || 0,
+            image:
+              maticCoin?.image ||
+              "https://assets.coingecko.com/coins/images/4713/small/matic-token-icon.png",
+          },
+          {
+            id: "agt",
+            name: "AGT",
+            current_price: agtPrice,
+            holdings: agtTokenBalance,
+            symbol: "AGT",
+            price_change_percentage_24h: 0,
+            image: "https://via.placeholder.com/40",
+          },
+        ]);
+      } catch (error) {
+        console.error("Error fetching coin data:", error);
+      } finally {
+        setLoadingPortfolio(false);
+      }
+    };
+
+    fetchAllCoins();
+  }, [walletAddress, balance, agtBalance, agtPrice]);
 
   const handleWalletSearch = (newAddress: string) => {
-    if (newAddress.startsWith('0x')) {
+    if (newAddress.startsWith("0x")) {
       router.push(`/dashboard/${newAddress}`);
     }
   };
@@ -143,7 +168,10 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
         <div className="grid grid-cols-2 items-center">
           <div className="flex items-center">
             {isSearchedWallet ? (
-              <button onClick={() => router.back()} className="text-2xl font-bold">
+              <button
+                onClick={() => router.back()}
+                className="text-2xl font-bold"
+              >
                 Go Back
               </button>
             ) : (
@@ -168,7 +196,9 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
               <div>
                 <h1 className="text-3xl font-bold">Wallet</h1>
                 <p className="text-gray-500">Address: {walletAddress}</p>
-                <p className="text-gray-500 text-lg">Total Balance: ${totalPortfolioValue}</p>
+                <p className="text-gray-500 text-lg">
+                  Total Balance: ${totalPortfolioValue}
+                </p>
                 {isSearchedWallet && (
                   <div className="mt-2 w-1/2">
                     <a
@@ -197,11 +227,13 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
                   amount={formatCurrency(coin.current_price)}
                   image={coin.image}
                 />
-              ))} 
+              ))}
             </section>
           </div>
           <div>
-            <h2 className="text-lg font-bold mb-4">{isSearchedWallet ? 'Portfolio' : 'My Portfolio'}</h2>
+            <h2 className="text-lg font-bold mb-4">
+              {isSearchedWallet ? "Portfolio" : "My Portfolio"}
+            </h2>
             <section className="bg-white p-6 rounded-[20px] shadow-sm max-h-80 overflow-auto">
               {loadingPortfolio ? (
                 <div>Loading Assets...</div>
@@ -210,9 +242,15 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
                   <PortfolioItem
                     key={coin.id}
                     name={coin.name}
-                    amount={`${formatCurrency(coin.current_price * coin.holdings)}`}
-                    percentage={`${coin.price_change_percentage_24h.toFixed(2)}%`}
-                    quantity={`${coin.holdings.toFixed(2)} ${coin.symbol.toUpperCase()}`}
+                    amount={`${formatCurrency(
+                      coin.current_price * coin.holdings
+                    )}`}
+                    percentage={`${coin.price_change_percentage_24h.toFixed(
+                      2
+                    )}%`}
+                    quantity={`${coin.holdings.toFixed(
+                      2
+                    )} ${coin.symbol.toUpperCase()}`}
                     image={coin.image}
                   />
                 ))
