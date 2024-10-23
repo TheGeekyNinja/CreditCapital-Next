@@ -203,10 +203,10 @@ const Home = () => {
         className="px-5 py-20 benefits_banner relative bg-black"
         id="benefits"
       >
-        <div className="max-w-[100rem] mx-auto text-center z-20 relative">
+        <div className="max-w-[70rem] mx-auto text-center z-20 relative">
           <p className="text-5xl text-[#53a9ff]">Benefits</p>
           <div className="flex sm:flex-row flex-col gap-5 my-20 text-white">
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 px-8">
               <Image
                 src="/pc_icon_white.png"
                 className="h-40 w-fit mx-auto"
@@ -222,28 +222,30 @@ const Home = () => {
                 the typical liquidity discount associated with big sales.
               </p>
             </div>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 px-8">
               <Image
                 src="/chart_icon_white.png"
                 className="h-40 w-fit mx-auto"
-                alt="Recurring Revenue"
+                alt="Redemption Mechanism"
                 width={160}
                 height={160}
               />
               <p className="text-[#53a9ff] font-semibold text-xl">
-                USD Stablecoin Redemption Mechanism
+                Redemption Mechanism
               </p>
               <p>
                 Instead of dealing with a redemption process where you must take
-                delivery of actual gold, the liquidity pool allows you to sell
+                delivery of actual gold, a liquidity pool allows you to sell
                 AGT for common stablecoins.
               </p>
             </div>
-            <div className="flex flex-col gap-5">
+          </div>
+          <div className="flex sm:flex-row flex-col gap-5 my-20 text-white">
+          <div className="flex flex-col gap-5 px-8">
               <Image
                 src="/pie_icon_white.png"
                 className="w-40 mx-auto"
-                alt="Securitized Asset Value"
+                alt="Overcollateralization"
                 width={160}
                 height={160}
               />
@@ -255,6 +257,23 @@ const Home = () => {
                 higher than the total token supply. Since the gold reserves in
                 the mine have been appraised with a discounted cash flow (DCF)
                 at a 90% rate, AGT is heavily overcollateralized.
+              </p>
+            </div>
+            <div className="flex flex-col gap-5 px-8">
+              <Image
+                src="/pie_icon_white.png"
+                className="w-40 mx-auto"
+                alt="AUM Value Revenue Share"
+                width={160}
+                height={160}
+              />
+              <p className="text-[#53a9ff] font-semibold text-xl">
+                AUM Value Revenue Share
+              </p>
+              <p>
+                1% of the value of the assets under management by Axos Gold (our gold reserves)
+                is dispensed as ETH to all token holders. This is done proportionally, based on what
+                percentage of the total circulating supply you hold, and is dispensed on a monthly basis.
               </p>
             </div>
           </div>
