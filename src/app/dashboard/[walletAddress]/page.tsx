@@ -36,6 +36,8 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
   const [loadingPortfolio, setLoadingPortfolio] = useState(true);
   const { address: loggedInAddress } = getAccount(config);
 
+  const AGT_TOKEN_ADDRESS = "0x53e30ec7039d6df4baf57cc6540558a0902d0026" as const;
+
   const validWalletAddress =
     typeof walletAddress === "string" && walletAddress.startsWith("0x")
       ? walletAddress
@@ -67,7 +69,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
 
   // Fetch AGT token balance
   const { data: agtBalanceData } = useReadContract({
-    address: process.env.AGT_TOKEN_ADDRESS as `0x${string}`,
+    address: AGT_TOKEN_ADDRESS,
     abi,
     functionName: "balanceOf",
     args: [validWalletAddress as `0x${string}`],
@@ -75,7 +77,6 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
 
   useEffect(() => {
     if (agtBalanceData) {
-      console.log("AGT Balance Data:", agtBalanceData);
       setAgtBalance(agtBalanceData.toString());
     }
   }, [agtBalanceData]);
@@ -88,7 +89,6 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
           throw new Error("Failed to fetch gold price");
         }
         const data = await response.json();
-        console.log("Gold Price Data:", data);
         setAgtPrice(data.price);
       } catch (error) {
         console.error("Error fetching gold price:", error);
@@ -120,8 +120,6 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
         const agtTokenBalance = agtBalance
           ? parseFloat(formatUnits(BigInt(agtBalance), 18))
           : 0.0;
-
-        console.log("Formatted AGT Token Balance:", agtTokenBalance);
 
         setPortfolioCoins([
           {
