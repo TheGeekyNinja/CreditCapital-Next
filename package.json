@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "deployprod": "curl https://api.vercel.com/v1/integrations/deploy/prj_o2uZUfYfrVfu8NvE5MGkjrCTZeYQ/YrBwQhXih3",
-    "deploydev": "curl https://api.vercel.com/v1/integrations/deploy/prj_o2uZUfYfrVfu8NvE5MGkjrCTZeYQ/UoQQozrMpC",
+    "deploydev": "curl https://api.vercel.com/v1/integrations/deploy/prj_sFpN0D3ehJwd8H3IILSIiMwNsrEI/xNbRrxxeCF",
     "lint": "next lint"
   },
   "dependencies": {
