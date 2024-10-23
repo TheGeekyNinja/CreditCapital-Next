@@ -99,8 +99,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
   }, []);
 
   const totalPortfolioValue = portfolioCoins
-    .reduce((total, coin) => total + coin.current_price * coin.holdings, 0)
-    .toFixed(2);
+    .reduce((total, coin) => total + coin.current_price * coin.holdings, 0);
 
   useEffect(() => {
     const fetchAllCoins = async () => {
@@ -195,7 +194,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
                 <h1 className="text-3xl font-bold">Wallet</h1>
                 <p className="text-gray-500">Address: {walletAddress}</p>
                 <p className="text-gray-500 text-lg">
-                  Total Balance: ${totalPortfolioValue}
+                  Total Balance: ${formatCurrency(totalPortfolioValue)}
                 </p>
                 {isSearchedWallet && (
                   <div className="mt-2 w-1/2">
