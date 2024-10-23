@@ -13,7 +13,7 @@ const Home = () => {
           {/* Section 1 */}
           <div className="flex flex-col md:flex-row items-center gap-10 mt-12">
             <div className="flex flex-col gap-8 w-full text-white">
-              <p className="md:text-5xl text-4xl -mb-5">Axos Gold:</p>
+              <p className="md:text-5xl text-4xl -mb-5">Photonics Gold:</p>
               <p className="md:text-5xl text-4x text-[#c2c2c2]">
                 Unleashing Gold Liquidity, Empowering Token Holders
               </p>
@@ -73,7 +73,7 @@ const Home = () => {
       <div className="px-5 py-20">
         <div className="max-w-[50rem] mx-auto text-center">
           <p className="md:text-5xl text-4xl text-[#003366]">
-            About the Axos Gold Token
+            About the Photonics Gold Token
           </p>
           <div className="flex sm:flex-row flex-col gap-5 my-20">
             <div className="flex flex-col gap-5 w-full p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
@@ -84,9 +84,9 @@ const Home = () => {
                 width={160}
                 height={160}
               />
-              <p className="text-[#003366] font-semibold text-xl">Equity</p>
+              <p className="text-[#003366] font-semibold text-xl">Price Exposure</p>
               <p>
-                Holding Axos Gold&apos;s security tokens means owning an
+                Holding Photonics&apos; tokens means owning an
                 overcollateralized gold derivative, allowing secure exposure to
                 the price of gold.
               </p>
@@ -100,13 +100,12 @@ const Home = () => {
                 height={160}
               />
               <p className="text-[#003366] font-semibold text-xl">
-                Security Token
+                 Token
               </p>
               <p>
-                Our tokens represent the key to true ownership. Backed by
-                tangible gold and governed by white-listed investor regulations,
-                they reflect the true blend of digital currencies with
-                traditional investments.
+                PHTG tokens represent an interest in gold reserves. Photonics holds
+                these tangible reserves in a trust, and the token is governed by white-listed
+                investor regulations.
               </p>
             </div>
             <div className="flex flex-col gap-5 w-full p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
@@ -122,7 +121,7 @@ const Home = () => {
               </p>
               <p>
                 Our gold reserves are tokenized at a one-to-one ratio, so that
-                one token is equivalent to one oz of gold.
+                one token is equivalent to one oz of gold. This is maintained by 
               </p>
             </div>
           </div>
@@ -174,10 +173,10 @@ const Home = () => {
               </p>
               <p className="text-[#003366] font-bold text-xl">Tokenization</p>
               <p className="md:text-xl text-lg">
-                By tokenizing assets, we significantly expand the buyer pool,
-                curbing the negative impacts of liquidity discounts. This way,
-                sellers lose less on value, and the market gets a fair chance to
-                determine the true worth of the assets.
+                The combined DCF gold reserves asset is being transferred to a
+                Wyoming LLC, of which its equity securities will be tokenized, and
+                will be promoted through a Private Placement offering under
+                SEC Regulation D, Rule 506(c), and Regulation S for non-US investors.
               </p>
               <p className="text-[#003366] font-bold text-xl">
                 Gold-Oz-Price-Peg

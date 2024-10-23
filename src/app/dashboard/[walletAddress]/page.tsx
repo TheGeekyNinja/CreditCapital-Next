@@ -135,10 +135,10 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
           },
           {
             id: "agt",
-            name: "AGT",
+            name: "PHTG",
             current_price: agtPrice,
             holdings: agtTokenBalance,
-            symbol: "AGT",
+            symbol: "PHTG",
             price_change_percentage_24h: 0,
             image: "https://via.placeholder.com/40",
           },
