@@ -36,7 +36,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
   const [loadingPortfolio, setLoadingPortfolio] = useState(true);
   const { address: loggedInAddress } = getAccount(config);
 
-  const AGT_TOKEN_ADDRESS = "0x53e30ec7039d6df4baf57cc6540558a0902d0026" as const;
+  const AGT_TOKEN_ADDRESS = "0xfADa74f0C3a85445aFD7D07bb70226Cc071F6c07" as const;
 
   const validWalletAddress =
     typeof walletAddress === "string" && walletAddress.startsWith("0x")
@@ -135,10 +135,10 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
           },
           {
             id: "agt",
-            name: "AGT",
+            name: "PHTG",
             current_price: agtPrice,
             holdings: agtTokenBalance,
-            symbol: "AGT",
+            symbol: "PHTG",
             price_change_percentage_24h: 0,
             image: "https://via.placeholder.com/40",
           },
