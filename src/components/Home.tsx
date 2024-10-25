@@ -13,7 +13,7 @@ const Home = () => {
           {/* Section 1 */}
           <div className="flex flex-col md:flex-row items-center gap-10 mt-12">
             <div className="flex flex-col gap-8 w-full text-white">
-              <p className="md:text-5xl text-4xl -mb-5">Photonics Gold:</p>
+              <p className="md:text-5xl text-4xl -mb-5">Photonics Labs:</p>
               <p className="md:text-5xl text-4x text-[#c2c2c2]">
                 Unleashing Gold Liquidity, Empowering Token Holders
               </p>
@@ -53,9 +53,9 @@ const Home = () => {
           <div className="flex flex-col md:flex-row items-center gap-10 shadow-lg rounded-xl">
             <div className="flex flex-col gap-5 w-full p-5">
               <p className="md:text-3xl text-2xl text-[#003366]">
-                An ecosystem where large-scale metal reserves like gold mines
-                become liquid and accessible to a wider audience, facilitated by
-                blockchain technology.
+                An ecosystem where both large-scale gold reserves support
+                a token with the , all facilitated by
+                EVM blockchain technology and Chainlink's oracle service.
               </p>
             </div>
             <Image
@@ -73,7 +73,7 @@ const Home = () => {
       <div className="px-5 py-20">
         <div className="max-w-[50rem] mx-auto text-center">
           <p className="md:text-5xl text-4xl text-[#003366]">
-            About the Photonics Gold Token
+            About the Photonics Labs Token
           </p>
           <div className="flex sm:flex-row flex-col gap-5 my-20">
             <div className="flex flex-col gap-5 w-full p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
@@ -86,9 +86,8 @@ const Home = () => {
               />
               <p className="text-[#003366] font-semibold text-xl">Price Exposure</p>
               <p>
-                Holding Photonics&apos; tokens means owning an
-                overcollateralized gold derivative, allowing secure exposure to
-                the price of gold.
+                Holding Photonics' tokens means owning an overcollateralized gold derivative,
+                giving you secure exposure to the price of gold.
               </p>
             </div>
             <div className="flex flex-col gap-5 w-full p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
@@ -103,9 +102,9 @@ const Home = () => {
                  Token
               </p>
               <p>
-                PHTG tokens represent an interest in gold reserves. Photonics holds
-                these tangible reserves in a trust, and the token is governed by white-listed
-                investor regulations.
+                PGLD tokens represent an interest Photonics' underlying assets under management. Photonics holds
+                gold reserves in a trust. The PGLD token is deployed on the Polygon blockchain, and
+                whitelisted, meaning only wallets that pass our KYC process can hold or trade it.
               </p>
             </div>
             <div className="flex flex-col gap-5 w-full p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
@@ -117,11 +116,11 @@ const Home = () => {
                 height={160}
               />
               <p className="text-[#003366] font-semibold text-xl">
-                Commodity Peg
+                Gold Peg
               </p>
               <p>
-                Our gold reserves are tokenized at a one-to-one ratio, so that
-                one token is equivalent to one oz of gold. This is maintained by 
+                Our gold reserves are tokenized at a one-to-one ratio, so that one token is equivalent
+                to one oz of gold. This is maintained by a automated market maker (trading bot).
               </p>
             </div>
           </div>
@@ -144,20 +143,17 @@ const Home = () => {
                 Illiquidity of Gold Reserves
               </p>
               <p className="md:text-xl text-lg">
-                Illiquidity in Large-Scale Investments: Unmined precious metal
-                investments face inherent challenges. Extracting resources like
-                these from their sites is expensive, and impacts the
-                environment. Not to mention the cost and logistics of storing
-                gold in a vault or taking delivery of it, which often leads to
-                undesirable liquidity discounts.
+                Illiquidity in large-scale gold reserves: precious metal investments face inherent
+                challenges. Extracting resources like these from their sites is expensive, and impacts the
+                environment. Not to mention the cost and logistics of storing gold in a vault or taking
+                delivery of it, which often leads to undesirable price discounts.
               </p>
               <p className="text-[#003366] font-bold text-xl">
-                Disproportional Value Loss
+                Logistical Costs of Bullion Reserves
               </p>
               <p className="md:text-xl text-lg">
-                Bigger sales often command lower value prices, owing to a
-                limited buyer pool. This puts sellers at a significant
-                disadvantage.
+                Storing gold in a vault for backing purposes is costly, and creates problems associated with
+                taking delivery or selling the physical asset.
               </p>
             </div>
           </div>
@@ -173,18 +169,19 @@ const Home = () => {
               </p>
               <p className="text-[#003366] font-bold text-xl">Tokenization</p>
               <p className="md:text-xl text-lg">
-                The combined DCF gold reserves asset is being transferred to a
-                Wyoming LLC, of which its equity securities will be tokenized, and
-                will be promoted through a Private Placement offering under
-                SEC Regulation D, Rule 506(c), and Regulation S for non-US investors.
+                Photonics' token, PGLD, derives value from a gold reserve through a
+                relationship between our smart contracts and a trust. The combined
+                DCF gold reserves asset is being transferred to a Wyoming LLC, of which
+                its equity securities will be tokenized, and will be promoted through a
+                Private Placement offering under SEC Regulation D, Rule 506(c), and
+                Regulation S for non-US investors.
               </p>
               <p className="text-[#003366] font-bold text-xl">
-                Gold-Oz-Price-Peg
+                Gold-Oz-Price Peg
               </p>
               <p className="md:text-xl text-lg">
-                Through the proportion of the initial supply mint, and the
-                liquidity pool where Axos Gold Token is listed, a peg is
-                maintained between the price of AGT and the oz price of gold.
+                Through both the proportion of the initial supply mint, and the liquidity pool
+                where Axos Gold Token is listed, a peg is maintained between the price of PGLD and the per-oz price of gold.
               </p>
             </div>
             <Image
@@ -234,8 +231,8 @@ const Home = () => {
               </p>
               <p>
                 Instead of dealing with a redemption process where you must take
-                delivery of actual gold, a liquidity pool allows you to sell
-                AGT for common stablecoins.
+                delivery of physical gold, a liquidity pool allows you to sell
+                this combination of the two for ETH or stablecoins.
               </p>
             </div>
           </div>
@@ -287,27 +284,23 @@ const Home = () => {
       <div className="px-5 py-20">
         <div className="max-w-[100rem] mx-auto">
           <p className="md:text-5xl text-4xl text-center text-[#003366]">
-            Onboarding <span className="text-[#0080ff]">Assets</span>
+            Onboarding <span className="text-[#0080ff]">Tokenholders</span>
           </p>
           <br />
           <p className="text-center">
-            You, as an gold reserves owner, bring your assets to Axos Gold. We
-            take over from there, tokenizing your gold and issuing you 10% of
-            the that value in tokens.
+            Your avenue to buying PGLD tokens is the liquidity pool on Uniswap,
+            a decentralized exchange where we have listed the Photonics Labs Gold Token.
           </p>
           <br />
           <div className="flex flex-col sm:flex-row gap-10 items-center">
             <div className="sm:text-right w-full">
               <div className="p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
                 <p className="text-[#003366] font-bold text-xl">
-                  Reserve Introduction
+                  Crypto Onramping
                 </p>
                 <p className="md:text-xl text-lg">
-                  Your journey begins with introducing your assets to Axos Gold.
-                  As an asset owner, you will need to provide detailed
-                  information about your capital investment, cost-to-operate,
-                  potential difficulties with commencing operations in it, and
-                  any past appraisals.
+                  Your journey begins with converting your capital to POL or Wrapped ETH on the Polygon network.
+                  This 
                 </p>
               </div>
               <br />
