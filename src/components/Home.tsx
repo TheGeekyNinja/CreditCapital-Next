@@ -53,9 +53,9 @@ const Home = () => {
           <div className="flex flex-col md:flex-row items-center gap-10 shadow-lg rounded-xl">
             <div className="flex flex-col gap-5 w-full p-5">
               <p className="md:text-3xl text-2xl text-[#003366]">
-                An ecosystem where both large-scale gold reserves support
-                a token with the , all facilitated by
-                EVM blockchain technology and Chainlink&apos;s oracle service.
+                An ecosystem where large-scale metal reserves like gold mines
+                become liquid and accessible to a wider audience, facilitated by
+                blockchain technology and Chainlink&apos;s oracle service.
               </p>
             </div>
             <Image
@@ -120,7 +120,7 @@ const Home = () => {
               </p>
               <p>
                 Our gold reserves are tokenized at a one-to-one ratio, so that one token is equivalent
-                to one oz of gold.
+                to one ounce of gold.
               </p>
             </div>
           </div>
@@ -169,19 +169,18 @@ const Home = () => {
               </p>
               <p className="text-[#003366] font-bold text-xl">Tokenization</p>
               <p className="md:text-xl text-lg">
-                Photonics&apos; token, PHTG, derives value from a gold reserve through a
-                relationship between our smart contracts and a trust. The combined
-                DCF gold reserves asset is being transferred to a Wyoming LLC, of which
-                its equity securities will be tokenized, and will be promoted through a
-                Private Placement offering under SEC Regulation D, Rule 506(c), and
-                Regulation S for non-US investors.
+                Photonics&apos; token, PHTG, gains value from a gold reserve through our
+                smart contracts&apos; relationship with a trust. We are transferring the combined
+                DCF gold reserves asset to a Wyoming LLC, tokenizing its equity securities,
+                and promoting them through a Private Placement offering under SEC Regulation D,
+                Rule 506(c), and Regulation S for non-US investors.
               </p>
               <p className="text-[#003366] font-bold text-xl">
-                Gold-Oz-Price Peg
+                Gold-Ounce-Price Peg
               </p>
               <p className="md:text-xl text-lg">
                 Through both the proportion of the initial supply mint, and the liquidity pool
-                where PHTG is listed, a peg is maintained between the price of PHTG and the per-oz price of gold.
+                where PHTG is listed, a peg is maintained between the price of PHTG and the per-ounce price of gold.
               </p>
             </div>
             <Image
@@ -519,8 +518,8 @@ const Home = () => {
                   </div>
                 </summary>
                 <p className="md:text-xl text-lg">
-                  The value of a token is linked to oz price of gold. If the
-                  value of of gold drops significantly, PHTG would likely reflect
+                  The value of a token is linked to the ounce price of gold. If the
+                  value of gold drops significantly, PHTG would likely reflect
                   that decrease. If the price drop is because of a
                   &quot;de-peg&quot;, the price of the toking moving too far
                   away from the gold price, that&apos;s when Photonics Gold would
