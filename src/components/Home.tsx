@@ -53,9 +53,9 @@ const Home = () => {
           <div className="flex flex-col md:flex-row items-center gap-10 shadow-lg rounded-xl">
             <div className="flex flex-col gap-5 w-full p-5">
               <p className="md:text-3xl text-2xl text-[#003366]">
-                An ecosystem where large-scale metal reserves like gold mines
-                become liquid and accessible to a wider audience, facilitated by
-                blockchain technology.
+                An ecosystem where both large-scale gold reserves support
+                a token with the , all facilitated by
+                EVM blockchain technology and Chainlink's oracle service.
               </p>
             </div>
             <Image
@@ -86,9 +86,8 @@ const Home = () => {
               />
               <p className="text-[#003366] font-semibold text-xl">Price Exposure</p>
               <p>
-                Holding Photonics&apos; tokens means owning an
-                overcollateralized gold derivative, allowing secure exposure to
-                the price of gold.
+                Holding Photonics' tokens means owning an overcollateralized gold derivative,
+                giving you secure exposure to the price of gold.
               </p>
             </div>
             <div className="flex flex-col gap-5 w-full p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
@@ -103,9 +102,9 @@ const Home = () => {
                  Token
               </p>
               <p>
-                PHTG tokens represent an interest in gold reserves. Photonics holds
-                these tangible reserves in a trust, and the token is governed by white-listed
-                investor regulations.
+                PHTG tokens represent an interest Photonics' underlying assets under management. Photonics holds
+                gold reserves in a trust. The PHTG token is deployed on the Polygon blockchain, and
+                whitelisted, meaning only wallets that pass our KYC process can hold or trade it.
               </p>
             </div>
             <div className="flex flex-col gap-5 w-full p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
@@ -117,11 +116,11 @@ const Home = () => {
                 height={160}
               />
               <p className="text-[#003366] font-semibold text-xl">
-                Commodity Peg
+                Gold Peg
               </p>
               <p>
-                Our gold reserves are tokenized at a one-to-one ratio, so that
-                one token is equivalent to one oz of gold. This is maintained by 
+                Our gold reserves are tokenized at a one-to-one ratio, so that one token is equivalent
+                to one oz of gold. This is maintained by a automated market maker (a trading bot).
               </p>
             </div>
           </div>
@@ -144,20 +143,17 @@ const Home = () => {
                 Illiquidity of Gold Reserves
               </p>
               <p className="md:text-xl text-lg">
-                Illiquidity in Large-Scale Investments: Unmined precious metal
-                investments face inherent challenges. Extracting resources like
-                these from their sites is expensive, and impacts the
-                environment. Not to mention the cost and logistics of storing
-                gold in a vault or taking delivery of it, which often leads to
-                undesirable liquidity discounts.
+                Illiquidity in large-scale gold reserves: precious metal investments face inherent
+                challenges. Extracting resources like these from their sites is expensive, and impacts the
+                environment. Not to mention the cost and logistics of storing gold in a vault or taking
+                delivery of it, which often leads to undesirable price discounts.
               </p>
               <p className="text-[#003366] font-bold text-xl">
-                Disproportional Value Loss
+                Logistical Costs of Bullion Reserves
               </p>
               <p className="md:text-xl text-lg">
-                Bigger sales often command lower value prices, owing to a
-                limited buyer pool. This puts sellers at a significant
-                disadvantage.
+                Storing gold in a vault for backing purposes is costly, and creates problems associated with
+                taking delivery or selling the physical asset.
               </p>
             </div>
           </div>
@@ -173,18 +169,19 @@ const Home = () => {
               </p>
               <p className="text-[#003366] font-bold text-xl">Tokenization</p>
               <p className="md:text-xl text-lg">
-                The combined DCF gold reserves asset is being transferred to a
-                Wyoming LLC, of which its equity securities will be tokenized, and
-                will be promoted through a Private Placement offering under
-                SEC Regulation D, Rule 506(c), and Regulation S for non-US investors.
+                Photonics' token, PHTG, derives value from a gold reserve through a
+                relationship between our smart contracts and a trust. The combined
+                DCF gold reserves asset is being transferred to a Wyoming LLC, of which
+                its equity securities will be tokenized, and will be promoted through a
+                Private Placement offering under SEC Regulation D, Rule 506(c), and
+                Regulation S for non-US investors.
               </p>
               <p className="text-[#003366] font-bold text-xl">
-                Gold-Oz-Price-Peg
+                Gold-Oz-Price Peg
               </p>
               <p className="md:text-xl text-lg">
-                Through the proportion of the initial supply mint, and the
-                liquidity pool where Axos Gold Token is listed, a peg is
-                maintained between the price of AGT and the oz price of gold.
+                Through both the proportion of the initial supply mint, and the liquidity pool
+                where PHTG is listed, a peg is maintained between the price of PHTG and the per-oz price of gold.
               </p>
             </div>
             <Image
@@ -234,8 +231,8 @@ const Home = () => {
               </p>
               <p>
                 Instead of dealing with a redemption process where you must take
-                delivery of actual gold, a liquidity pool allows you to sell
-                AGT for common stablecoins.
+                delivery of physical gold, a liquidity pool allows you to sell
+                this combination of the two for ETH or stablecoins.
               </p>
             </div>
           </div>
@@ -255,7 +252,7 @@ const Home = () => {
                 The amounts of actual gold backing your tokens are many times
                 higher than the total token supply. Since the gold reserves in
                 the mine have been appraised with a discounted cash flow (DCF)
-                at a 90% rate, AGT is heavily overcollateralized.
+                at a 90% rate, PHTG is heavily overcollateralized.
               </p>
             </div>
             <div className="flex flex-col gap-5 px-8">
@@ -270,7 +267,7 @@ const Home = () => {
                 AUM Value Revenue Share
               </p>
               <p>
-                1% of the value of the assets under management by Axos Gold (our gold reserves)
+                1% of the value of the assets under management by Photonics Gold (our gold reserves)
                 is dispensed as ETH to all token holders. This is done proportionally, based on what
                 percentage of the total circulating supply you hold, and is dispensed on a monthly basis.
               </p>
@@ -284,54 +281,49 @@ const Home = () => {
           fill={true}
         />
       </div>
-      <div className="px-5 py-20">
+      {/* <div className="px-5 py-20">
         <div className="max-w-[100rem] mx-auto">
           <p className="md:text-5xl text-4xl text-center text-[#003366]">
-            Onboarding <span className="text-[#0080ff]">Assets</span>
+            Onboarding <span className="text-[#0080ff]">Tokenholders</span>
           </p>
           <br />
           <p className="text-center">
-            You, as an gold reserves owner, bring your assets to Axos Gold. We
-            take over from there, tokenizing your gold and issuing you 10% of
-            the that value in tokens.
+            Your avenue to buying PHTG tokens is the liquidity pool on Uniswap,
+            a decentralized exchange where we have listed the Photonics Labs Gold Token.
           </p>
           <br />
           <div className="flex flex-col sm:flex-row gap-10 items-center">
             <div className="sm:text-right w-full">
               <div className="p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
                 <p className="text-[#003366] font-bold text-xl">
-                  Reserve Introduction
+                  Crypto Onramping
                 </p>
                 <p className="md:text-xl text-lg">
-                  Your journey begins with introducing your assets to Axos Gold.
-                  As an asset owner, you will need to provide detailed
-                  information about your capital investment, cost-to-operate,
-                  potential difficulties with commencing operations in it, and
-                  any past appraisals.
+                  Your journey begins with converting your capital to POL or Wrapped ETH on the Polygon network.
+                  This can most easily be done through a centralized cryptocurrency exchange. But if you're already
+                  holding crypto, it can be bridged over to polygon, depending on which network it's on.
                 </p>
               </div>
               <br />
               <div className="p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
                 <p className="text-[#003366] font-bold text-xl">
-                  Reserve Evaluation
+                  Bridging to Polygon
                 </p>
                 <p className="md:text-xl text-lg">
-                  Our team of seasoned finance and blockchain professionals will
-                  thoroughly evaluate your asset, determining its potential for
-                  tokenization and its potential value in the token market.
+                  If your centralized exchange supports the polygon network, this step does not apply. But if
+                  that's not the case, and you're already holding crypto, it could be bridged over to polygon,
+                  depending on which network it's on. The Photonics Gold Team can assist you with this process.
                 </p>
               </div>
               <br />
               <div className="p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
                 <p className="text-[#003366] font-bold text-xl">
-                  Tokenization Process
+                  Connecting to Uniswap
                 </p>
                 <p className="md:text-xl text-lg">
-                  Once your asset meets our evaluation criteria, we will move
-                  forward with the tokenization process. This involves digitally
-                  representing your asset as commodity tokens on the blockchain.
-                  Each token will embody a proportional ownership stake in your
-                  asset, thus democratizing access to the reserves.
+                  The trading pair (also called the liquidity pool) is available both through the Uniswap exchange
+                  interface on their website, and the dashboard on this website. In both cases, you will need to connect
+                  your ethereum/polygon wallet to the interface. This is how you login to the interface and send tokens.
                 </p>
               </div>
             </div>
@@ -347,52 +339,49 @@ const Home = () => {
             <div className="w-full">
               <div className="p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
                 <p className="text-[#003366] font-bold text-xl">
-                  Token Issuance
+                  Swapping Tokens
                 </p>
                 <p className="md:text-xl text-lg">
-                  After successful tokenization, you will be issued tokens
-                  equivalent to the DCF value of your gold reserve. You become
-                  the rightful owner of these tokens and can choose to trade or
-                  stake them in our liquidity pool.
+                  You may buy PHTG tokens through this interface, without a counterparty or
+                  "sell order". The counterpartie(s) in this case are a combination of the liquidity
+                  pool itself and any previous transactors.
                 </p>
               </div>
               <br />
               <div className="p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
                 <p className="text-[#003366] font-bold text-xl">
-                  Asset Management
+                  Awaiting Unlock
                 </p>
                 <p className="md:text-xl text-lg">
-                  As your asset is now part of the Axos Gold ecosystem, our
-                  expert team will oversee its management. This includes
-                  monitoring the performance of the tokenized asset, managing
-                  the liquidity pool, and ensuring timely revenue distribution
-                  among token holders
+                  Your PHTG tokens will be locked in your walled after receipt, by the PHTG smart contract
+                  due to the vesting schedule. But starting from the time your wallet first receives PHTG,
+                  a timer starts, which unlocks 0.25% of the first amount recieved, per month, until it runs
+                  out of tokens to unlock. For example: if you bought 1,000 tokens from the LP and later bought
+                  another 25, the smart contract would unlock 2.5 of your tokens per month, until the full 1,025
+                  had been freed up.
                 </p>
               </div>
               <br />
               <div className="p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50">
                 <p className="text-[#003366] font-bold text-xl">
-                  Regular Updates and Reports
+                  Receiving the 1% AUM Revenue
                 </p>
                 <p className="md:text-xl text-lg">
-                  You will receive regular updates and detailed reports on the
-                  performance of your tokenized asset, revenue distributions,
-                  market trends, and valuable insights to help you make informed
-                  decisions regarding your token holdings.
+                  update this text
                 </p>
               </div>
             </div>
           </div>
           <br />
           <p className="text-center">
-            By tokenizing your assets with Axos Gold, you&apos;re not only
+            By tokenizing your assets with Photonics Gold, you&apos;re not only
             enhancing your asset&apos;s liquidity but also opening up new
             avenues for revenue generation and expanding the potential investor
             pool. This ultimately leads to a better valuation of your asset and
             provides an innovative way to optimize your capital investments.
           </p>
         </div>
-      </div>
+      </div> */}
       {/* Section 9: Contact Form */}
       <div className="px-5 py-20 bg-[#EAE9E999]" id="contact">
         <div className="max-w-[50rem] mx-auto">
@@ -454,7 +443,7 @@ const Home = () => {
                 </summary>
                 <p className="md:text-xl text-lg">
                   Tokenization involves transforming the value of an asset into
-                  a format that can be represented digitally. With AxosGold,
+                  a format that can be represented digitally. With PHTG,
                   assets are converted into security tokens that represent
                   equivalent ownership stakes.
                 </p>
@@ -472,12 +461,7 @@ const Home = () => {
                   </div>
                 </summary>
                 <p className="md:text-xl text-lg">
-                  While the specific criteria can vary, typically, any asset
-                  with demonstrable value can be tokenized. Axos Gold focuses
-                  primarily on large-scale capital investments like bonds. For
-                  detailed criteria, you should contact Capital Alliance
-                  directly. Note that Axos Gold also allows participation
-                  through OTC trades of normal crypto.
+                  If you are interested in tokenizing gold reserves, please get into contact with us.
                 </p>
               </details>
             </div>
@@ -494,7 +478,7 @@ const Home = () => {
                 </summary>
                 <p className="md:text-xl text-lg">
                   Like any investment, tokenization involves risks, such as
-                  market volatility influencing token value. However, Axos Gold
+                  market volatility influencing token value. However, PHTG
                   mitigates these risks with a robust bond guarantee system
                   backed by a fund of tokens, ensuring smooth operations and
                   securing investor interests.
@@ -536,10 +520,10 @@ const Home = () => {
                 </summary>
                 <p className="md:text-xl text-lg">
                   The value of a token is linked to oz price of gold. If the
-                  value of of gold drops significantly, AGT would likely reflect
+                  value of of gold drops significantly, PHTG would likely reflect
                   that decrease. If the price drop is because of a
                   &quot;de-peg&quot;, the price of the toking moving too far
-                  away from the gold price, that&apos;s when Axos Gold would
+                  away from the gold price, that&apos;s when Photonics Gold would
                   automatically trade the pair using our cash-on-hand, to bring
                   it back into sync. Our systems have threshholds set for this,
                   such that the price is allowed to de-peg only very slightly,
@@ -581,7 +565,7 @@ const Home = () => {
                   </div>
                 </summary>
                 <p className="md:text-xl text-lg">
-                  Axos Gold&apos;s tokens represent equity ownership in the
+                  Photonics Gold&apos;s tokens represent equity ownership in the
                   company, held by a licensed Trust Company as a fiduciary on
                   behalf of token holders. Therefore, token holders have legal
                   rights akin to shareholders, such as voting rights and revenue
@@ -607,7 +591,7 @@ const Home = () => {
                   As with most investments, profits from holding or selling
                   tokens are likely to be subject to tax laws. The exact tax
                   implications depend on jurisdiction and individual
-                  circumstances. With Axos Gold&apos;s system, tax events may be
+                  circumstances. With Photonics Gold&apos;s system, tax events may be
                   deferred until users withdraw their dividends (though this
                   will be dependent on local laws), giving token holders control
                   over the timing of their tax obligations.
@@ -626,11 +610,11 @@ const Home = () => {
                   </div>
                 </summary>
                 <p className="md:text-xl text-lg">
-                  Axos Gold&apos;s model aims to increase the liquidity of
+                  Photonics Gold&apos;s model aims to increase the liquidity of
                   tokens by funding liquidity pools on popular exchanges. Since
-                  there is an incentive to hold AGT: the revenue distribution,
+                  there is an incentive to hold PHTG: the revenue distribution,
                   this incentivizes activity on those pairs also. These
-                  conditions ensure a liquid market for Axos Gold.
+                  conditions ensure a liquid market for Photonics Gold.
                 </p>
               </details>
             </div>
@@ -649,7 +633,7 @@ const Home = () => {
                   </div>
                 </summary>
                 <p className="md:text-xl text-lg">
-                  Axos Gold deployed AGT as an ERC-20 token on the Polygon
+                  Photonics Gold deployed PHTG as an ERC-20 token on the Polygon
                   blockchain, renowned for its robustness and security. The
                   platform ensures compliance through an address whitelist, and
                   dividends are managed and allocated through smart contracts.
