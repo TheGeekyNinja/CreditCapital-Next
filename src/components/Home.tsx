@@ -120,7 +120,7 @@ const Home = () => {
               </p>
               <p>
                 Our gold reserves are tokenized at a one-to-one ratio, so that one token is equivalent
-                to one oz of gold. This is maintained by a automated market maker (a trading bot).
+                to one oz of gold.
               </p>
             </div>
           </div>
@@ -383,7 +383,7 @@ const Home = () => {
         </div>
       </div> */}
       {/* Section 9: Contact Form */}
-      <div className="px-5 py-20 bg-[#EAE9E999]" id="contact">
+      {/* <div className="px-5 py-20 bg-[#EAE9E999]" id="contact">
         <div className="max-w-[50rem] mx-auto">
           <div className="flex flex-col gap-5 w-full">
             <p className="md:text-5xl text-4xl text-[#003366] text-center">
@@ -421,7 +421,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="px-5 py-20" id="faq">
         <div className="max-w-[100rem] mx-auto">
