@@ -12,8 +12,8 @@ import { headers } from 'next/headers' // added
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Axos Gold',
-  description: 'Axos Gold',
+  title: 'Photonics Gold',
+  description: 'Photonics Gold',
 };
 
 export default function RootLayout({

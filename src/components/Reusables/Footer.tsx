@@ -7,7 +7,7 @@ const Footer = () => {
       id="contact"
     >
       <Image src="/logo.png" alt="Logo" width={48} height={50} />
-      <p>&copy; 2023, Capitalliance Ltd. All Rights Reserved.</p>
+      <p>&copy; 2023, Photonics Gold Ltd. All Rights Reserved.</p>
     </div>
   );
 };
