@@ -1,5 +1,5 @@
 import {
-  ArrowSmallRightIcon,
+  // ArrowSmallRightIcon,
   ArrowDownIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
@@ -55,7 +55,7 @@ const Home = () => {
               <p className="md:text-3xl text-2xl text-[#003366]">
                 An ecosystem where both large-scale gold reserves support
                 a token with the , all facilitated by
-                EVM blockchain technology and Chainlink's oracle service.
+                EVM blockchain technology and Chainlink&apos;s oracle service.
               </p>
             </div>
             <Image
@@ -86,7 +86,7 @@ const Home = () => {
               />
               <p className="text-[#003366] font-semibold text-xl">Price Exposure</p>
               <p>
-                Holding Photonics' tokens means owning an overcollateralized gold derivative,
+                Holding Photonics&apos; tokens means owning an overcollateralized gold derivative,
                 giving you secure exposure to the price of gold.
               </p>
             </div>
@@ -102,7 +102,7 @@ const Home = () => {
                  Token
               </p>
               <p>
-                PHTG tokens represent an interest Photonics' underlying assets under management. Photonics holds
+                PHTG tokens represent an interest Photonics&apos; underlying assets under management. Photonics holds
                 gold reserves in a trust. The PHTG token is deployed on the Polygon blockchain, and
                 whitelisted, meaning only wallets that pass our KYC process can hold or trade it.
               </p>
@@ -169,7 +169,7 @@ const Home = () => {
               </p>
               <p className="text-[#003366] font-bold text-xl">Tokenization</p>
               <p className="md:text-xl text-lg">
-                Photonics' token, PHTG, derives value from a gold reserve through a
+                Photonics&apos; token, PHTG, derives value from a gold reserve through a
                 relationship between our smart contracts and a trust. The combined
                 DCF gold reserves asset is being transferred to a Wyoming LLC, of which
                 its equity securities will be tokenized, and will be promoted through a
