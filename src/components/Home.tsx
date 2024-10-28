@@ -169,11 +169,12 @@ const Home = () => {
               </p>
               <p className="text-[#003366] font-bold text-xl">Tokenization</p>
               <p className="md:text-xl text-lg">
-                Photonics&apos; token, PHTG, gains value from a gold reserve through our
-                smart contracts&apos; relationship with a trust. We are transferring the combined
-                DCF gold reserves asset to a Wyoming LLC, tokenizing its equity securities,
-                and promoting them through a Private Placement offering under SEC Regulation D,
-                Rule 506(c), and Regulation S for non-US investors.
+                Photonics' token, PHTG, derives value from a gold reserve through a
+                relationship between our smart contracts and a trust. We are transferring the combined
+                DCF gold reserves asset to a Wyoming LLC, whose
+                equity securities will be tokenized, and we will promote it through a
+                Private Placement offering under SEC Regulation D, Rule 506(c), and
+                Regulation S for non-US investors.
               </p>
               <p className="text-[#003366] font-bold text-xl">
                 Gold-Ounce-Price Peg
