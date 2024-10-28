@@ -1,5 +1,5 @@
 "use client";
-import Home from '@/components/Home';
+import Home from '@/components/Home/Home';
 import { useEffect, useState } from 'react';
 import { useAppKitAccount } from "@reown/appkit/react";
 import { useRouter, usePathname } from 'next/navigation';

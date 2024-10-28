@@ -1,0 +1,127 @@
+{
+  "banner": {
+    "title": "Photonics Gold:",
+    "subtitle": "Unleashing Gold Liquidity, Empowering Token Holders",
+    "description": "Transforming Large-scale Metal Reserves Through Tokenization",
+    "buttonText": "Learn More"
+  },
+  "about": {
+    "description": "An ecosystem where large-scale metal reserves like gold mines become liquid and accessible to a wider audience, facilitated by blockchain technology and Chainlink's oracle service."
+  },
+  "PHTG": {
+    "title": "About the Photonics Gold Token",
+    "features": [
+      {
+        "icon": "/pc_icon_blue.png",
+        "title": "Price Exposure",
+        "description": "Holding Photonics' tokens means owning an overcollateralized gold derivative, giving you secure exposure to the price of gold."
+      },
+      {
+        "icon": "/chart_icon_blue.png",
+        "title": "Token",
+        "description": "PHTG tokens represent an interest in Photonics' underlying assets under management. Photonics holds gold reserves in a trust. The PHTG token is deployed on the Polygon blockchain, and whitelisted, meaning only wallets that pass our KYC process can hold or trade it."
+      },
+      {
+        "icon": "/chart_icon_blue.png",
+        "title": "Gold Peg",
+        "description": "Our gold reserves are tokenized at a one-to-one ratio, so that one token is equivalent to one ounce of gold."
+      }
+    ]
+  },
+  "problem": {
+    "title": "The Problem",
+    "image": "/globe_futuristic_servers.png",
+    "description": [
+      {
+        "heading": "Illiquidity of Gold Reserves",
+        "text": "Illiquidity in large-scale gold reserves: precious metal investments face inherent challenges. Extracting resources like these from their sites is expensive, and impacts the environment. Not to mention the cost and logistics of storing gold in a vault or taking delivery of it, which often leads to undesirable price discounts."
+      },
+      {
+        "heading": "Logistical Costs of Bullion Reserves",
+        "text": "Storing gold in a vault for backing purposes is costly, and creates problems associated with taking delivery or selling the physical asset."
+      }
+    ]
+  },
+  "solution": {
+    "title": "The Solution",
+    "image": "/pay_now_phone.png",
+    "description": [
+      {
+        "heading": "Tokenization",
+        "text": "Photonics' token, PHTG, derives value from a gold reserve through a relationship between our smart contracts and a trust. We are transferring the combined DCF gold reserves asset to a Wyoming LLC, whose equity securities will be tokenized, and we will promote it through a Private Placement offering under SEC Regulation D, Rule 506(c), and Regulation S for non-US investors."
+      },
+      {
+        "heading": "Gold-Ounce-Price Peg",
+        "text": "Through both the proportion of the initial supply mint, and the liquidity pool where PHTG is listed, a peg is maintained between the price of PHTG and the per-ounce price of gold."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Benefits",
+    "background": "/benefits_banner_bg.png",
+    "features": [
+      {
+        "icon": "/pc_icon_white.png",
+        "title": "Minimized Liquidity Discount",
+        "description": "By tokenizing your large assets, you bypass the disadvantages of the typical liquidity discount associated with big sales."
+      },
+      {
+        "icon": "/chart_icon_white.png",
+        "title": "Redemption Mechanism",
+        "description": "Instead of dealing with a redemption process where you must take delivery of physical gold, a liquidity pool allows you to sell this combination of the two for ETH or stablecoins."
+      },
+      {
+        "icon": "/pie_icon_white.png",
+        "title": "Overcollateralization",
+        "description": "The amounts of actual gold backing your tokens are many times higher than the total token supply. Since the gold reserves in the mine have been appraised with a discounted cash flow (DCF) at a 90% rate, PHTG is heavily overcollateralized."
+      },
+      {
+        "icon": "/pie_icon_white.png",
+        "title": "AUM Value Revenue Share",
+        "description": "1% of the value of the assets under management by Photonics Gold (our gold reserves) is dispensed as ETH to all token holders. This is done proportionally, based on what percentage of the total circulating supply you hold, and is dispensed on a monthly basis."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "How exactly does tokenization work?",
+      "answer": "Tokenization involves transforming the value of an asset into a format that can be represented digitally. With PHTG, assets are converted into security tokens that represent equivalent ownership stakes."
+    },
+    {
+      "question": "What is the criteria for asset tokenization?",
+      "answer": "If you are interested in tokenizing gold reserves, please get into contact with us."
+    },
+    {
+      "question": "What are the risks involved?",
+      "answer": "Like any investment, tokenization involves risks, such as market volatility influencing token value. However, PHTG mitigates these risks with a robust bond guarantee system backed by a fund of tokens, ensuring smooth operations and securing investor interests."
+    },
+    {
+      "question": "What is a white-listed investor?",
+      "answer": "A white-listed investor is a verified investor who has completed industry-standard Know Your Customer (KYC) procedures, which helps prevent fraud and ensures compliance with regulations."
+    },
+    {
+      "question": "What happens if the value of the tokenized asset drops significantly?",
+      "answer": "The value of a token is linked to the ounce price of gold. If the value of gold drops significantly, PHTG would likely reflect that decrease. If the price drop is because of a \"de-peg,\" the price of the token moving too far away from the gold price, Photonics Gold would automatically trade the pair using our cash-on-hand, to bring it back into sync."
+    },
+    {
+      "question": "How does vesting work?",
+      "answer": "When you receive minted tokens from the protocol, they will have a lock timer on them, which prevents you from transferring out of your wallet. You can still earn revenue from them during this time, you just can't transfer them. As the timer ticks down, they will progressively unlock for normal use, and you'll be able to trade with them on the LP."
+    },
+    {
+      "question": "What is the legal standing of owning tokens?",
+      "answer": "Photonics Gold's tokens represent equity ownership in the company, held by a licensed Trust Company as a fiduciary on behalf of token holders. Therefore, token holders have legal rights akin to shareholders, such as voting rights and revenuedistribution rights."
+    },
+    {
+      "question": "What is the taxation situation for profits earned through holding or selling tokens?",
+      "answer": "As with most investments, profits from holding or selling tokens are likely to be subject to tax laws. The exact tax implications depend on jurisdiction and individual circumstances. With Photonics Gold's system, tax events may be deferred until users withdraw their dividends (though this will be dependent on local laws), giving token holders control over the timing of their tax obligations."
+    },
+    {
+      "question": "How liquid are the tokens?",
+      "answer": "Photonics Gold's model aims to increase the liquidity of tokens by funding liquidity pools on popular exchanges. Since there is an incentive to hold PHTG: the revenue distribution, this incentivizes activity on those pairs also. These conditions ensure a liquid market for Photonics Gold."
+    },
+    {
+      "question": "What is the technical infrastructure supporting the tokenization and trading process?",
+      "answer": "Photonics Gold deployed PHTG as an ERC-20 token on the Polygon blockchain, renowned for its robustness and security. The platform ensures compliance through an address whitelist, and dividends are managed and allocated through smart contracts. The tokens are listed on Uniswap, the largest decentralized exchange currently in operation on Polygon."
+    }
+  ]
+}
