@@ -54,7 +54,7 @@ const Home = () => {
             <div className="flex flex-col gap-5 w-full p-5">
               <p className="md:text-3xl text-2xl text-[#003366]">
                 An ecosystem where both large-scale gold reserves support
-                a token with the , all facilitated by
+                a token with the, all facilitated by
                 EVM blockchain technology and Chainlink's oracle service.
               </p>
             </div>
@@ -170,9 +170,9 @@ const Home = () => {
               <p className="text-[#003366] font-bold text-xl">Tokenization</p>
               <p className="md:text-xl text-lg">
                 Photonics' token, PHTG, derives value from a gold reserve through a
-                relationship between our smart contracts and a trust. The combined
-                DCF gold reserves asset is being transferred to a Wyoming LLC, of which
-                its equity securities will be tokenized, and will be promoted through a
+                relationship between our smart contracts and a trust. We are transferring the combined
+                DCF gold reserves asset to a Wyoming LLC, whose
+                equity securities will be tokenized, and we will promote it through a
                 Private Placement offering under SEC Regulation D, Rule 506(c), and
                 Regulation S for non-US investors.
               </p>
