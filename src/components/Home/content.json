@@ -61,24 +61,56 @@
     "background": "/benefits_banner_bg.png",
     "features": [
       {
-        "icon": "/pc_icon_white.png",
+        "icon": "/percentage.png",
         "title": "Minimized Liquidity Discount",
         "description": "By tokenizing your large assets, you bypass the disadvantages of the typical liquidity discount associated with big sales."
       },
       {
-        "icon": "/chart_icon_white.png",
+        "icon": "/chart.png",
         "title": "Redemption Mechanism",
         "description": "Instead of dealing with a redemption process where you must take delivery of physical gold, a liquidity pool allows you to sell this combination of the two for ETH or stablecoins."
       },
       {
-        "icon": "/pie_icon_white.png",
+        "icon": "/pie.png",
         "title": "Overcollateralization",
         "description": "The amounts of actual gold backing your tokens are many times higher than the total token supply. Since the gold reserves in the mine have been appraised with a discounted cash flow (DCF) at a 90% rate, PHTG is heavily overcollateralized."
       },
       {
-        "icon": "/pie_icon_white.png",
+        "icon": "/distribution.png",
         "title": "AUM Value Revenue Share",
         "description": "1% of the value of the assets under management by Photonics Gold (our gold reserves) is dispensed as ETH to all token holders. This is done proportionally, based on what percentage of the total circulating supply you hold, and is dispensed on a monthly basis."
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Onboarding Assets",
+    "image": "/onboarding.png",
+    "description": "You, as an asset owner, bring your assets to Credit Capital. We take over from there, tokenizing your assets and issuing you an equivalent number of tokens",
+    "botDescription": "By tokenizing your assets with Credit Capital, you're not only enhancing your asset's liquidity but also opening up new avenues for revenue generation and expanding the potential investor pool. This ultimately leads to a better valuation of your asset and provides an innovative way to optimize your capital investments.",
+    "steps": [
+      {
+        "title": "Asset Introduction",
+        "description": "Your journey begins with introducing your assets to Credit Capital. As an asset owner, you will need to provide detailed information about your capital investment, such as the type of asset, its current value, and its revenue-generating history, if applicable."
+      },
+      {
+        "title": "Asset Evaluation",
+        "description": "Our team of seasoned finance and blockchain professionals will thoroughly evaluate your asset, determining its potential for tokenization and its potential value in the token market."
+      },
+      {
+        "title": "Tokenization Process",
+        "description": "Once your asset meets our evaluation criteria, we will move forward with the tokenization process. This involves digitally representing your asset as security tokens on the blockchain. Each token will embody a proportional ownership stake in your asset, thus democratizing access to your capital investment."
+      },
+      {
+        "title": "Token Issuance",
+        "description": "After successful tokenization, you will be issued tokens equivalent to the value of your asset. You become the rightful owner of these tokens and can choose to trade or stake them in our liquidity pool."
+      },
+      {
+        "title": "Asset Management",
+        "description": "As your asset is now part of the Credit Capital ecosystem, our expert team will oversee its management. This includes monitoring the performance of the tokenized asset, managing the liquidity pool, and ensuring timely revenue distribution among token holders."
+      },
+      {
+        "title": "Regular Updates and Reports",
+        "description": "You will receive regular updates and detailed reports on the performance of your tokenized asset, revenue distributions, market trends, and valuable insights to help you make informed decisions regarding your token holdings."
       }
     ]
   },
