@@ -36,7 +36,8 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
   const [loadingPortfolio, setLoadingPortfolio] = useState(true);
   const { address: loggedInAddress } = getAccount(config);
 
-  const AGT_TOKEN_ADDRESS = "0xfADa74f0C3a85445aFD7D07bb70226Cc071F6c07" as const;
+  const AGT_TOKEN_ADDRESS =
+    process.env.NEXT_PUBLIC_AGT_TOKEN_ADDRESS as `0x${string}`;
 
   const validWalletAddress =
     typeof walletAddress === "string" && walletAddress.startsWith("0x")
