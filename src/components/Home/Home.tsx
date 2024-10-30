@@ -1,7 +1,5 @@
-import {
-  // ArrowSmallRightIcon,
-  ArrowDownIcon,
-} from "@heroicons/react/24/outline";
+import { ArrowUpCircleIcon } from "@heroicons/react/24/solid";
+import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import content from "./Content.json";
@@ -14,13 +12,13 @@ const Home = () => {
           {/* Section 1 */}
           <div className="flex flex-col md:flex-row items-center gap-10 mt-12">
             <div className="flex flex-col gap-8 w-full text-white">
-              <p className="md:text-5xl text-4xl -mb-5">
+              <p className="text-[83px] leading-[87px] -mb-5">
                 {content.banner.title}
               </p>
-              <p className="md:text-5xl text-4x text-[#c2c2c2]">
+              <p className="text-[83px] leading-[87px] text-[#c2c2c2]">
                 {content.banner.subtitle}
               </p>
-              <p className="md:text-2xl text-lg">
+              <p className="text-[34px] leading-[46.44px]">
                 {content.banner.description}
               </p>
               <div className="flex gap-3 items-center">
@@ -34,12 +32,7 @@ const Home = () => {
             </div>
             <div className="w-full">
               <div className="relative p-0">
-                <Image
-                  src="/goldB.png"
-                  alt="Phone"
-                  width={995}
-                  height={849}
-                />
+                <Image src="/goldB.png" alt="Phone" width={995} height={849} />
               </div>
             </div>
           </div>
@@ -68,8 +61,8 @@ const Home = () => {
 
       {/* Section 4 */}
       <div className="px-5 py-20">
-        <div className="max-w-[50rem] mx-auto text-center">
-          <p className="md:text-5xl text-4xl text-[#003366]">
+        <div className=" mx-auto text-center">
+          <p className="text-[83px] text-[#003366]">
             {content.PHTG.title}
           </p>
           <div className="flex sm:flex-row flex-col gap-5 my-20">
@@ -175,7 +168,7 @@ const Home = () => {
         id="benefits"
       >
         <div className="max-w-[70rem] mx-auto text-center z-20 relative">
-          <p className="text-5xl text-[#53a9ff]">{content.benefits.title}</p>
+          <p className="text-[83px] text-[#53a9ff]">{content.benefits.title}</p>
           <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 my-20 text-white">
             {content.benefits.features.map((benefit, index) => (
               <div key={index} className="flex flex-col gap-5 px-8">
@@ -189,7 +182,7 @@ const Home = () => {
                 <p className="text-[#53a9ff] font-semibold text-xl">
                   {benefit.title}
                 </p>
-                <p>{benefit.description}</p>
+                <p className="text-[#D6D6D6]">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -206,10 +199,10 @@ const Home = () => {
         className="flex flex-col items-center text-center max-w-6xl mx-auto py-20"
         id="onboarding"
       >
-        <h2 className="text-[#003366] text-4xl font-bold mb-4">
-          Onboarding <span className="text-[#0066FF]">Assets</span>
+        <h2 className="text-[#003366] leading-[113.38px] text-[83px] font-normal mb-4">
+          Onboarding <span className="text-[#0080FF]">Assets</span>
         </h2>
-        <p className="text-[#6B7280] text-lg mb-16 max-w-3xl">
+        <p className="text-[#828280] leading-[32.78px] font-light text-2xl mb-16">
           {content.onboarding.description}
         </p>
         <div className="grid grid-cols-3 gap-8 mb-16">
@@ -226,7 +219,7 @@ const Home = () => {
               </div>
             ))}
           </div>
-          
+
           {/* Center section with image */}
           <div className="flex justify-center relative">
             <Image
@@ -237,7 +230,7 @@ const Home = () => {
               className="object-contain"
             />
           </div>
-          
+
           {/* Last 3 steps in a row */}
           <div className="flex flex-col gap-8">
             {content.onboarding.steps.slice(3).map((step, index) => (
@@ -252,14 +245,14 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <p className="text-[#6B7280] text-base max-w-4xl">
+        <p className="text-[#6B7280] text-2xl leading-[30px] font-light">
           {content.onboarding.botDescription}
         </p>
       </div>
       {/* FAQ */}
       <div className="px-5 py-20 bg-[#FBFBFB]" id="faq">
         <div className="max-w-[100rem] mx-auto">
-          <p className="md:text-5xl text-4xl mb-3 text-center text-[#003366]">
+          <p className="text-[83px] mb-3 text-center text-[#003366]">
             Frequently asked questions
           </p>
           <br />
@@ -269,14 +262,15 @@ const Home = () => {
                 <div className="bg-[#E4E4E4] text-[#003366] p-2 rounded-md min-w-[2.5rem] text-center">
                   {index + 1}
                 </div>
-                <details className="w-full">
-                  <summary className="text-[#003366] font-bold text-xl flex justify-between items-center w-full mb-3">
+                <details className="w-full group">
+                  <summary className="group-open:text-[#003366] text-[#555555] font-medium text-3xl flex justify-between items-center w-full mb-5">
                     <p>{item.question}</p>
                     <div className="expand-arrow rounded-full p-1">
-                      <ArrowDownIcon className="h-5 w-5" />
+                      <ArrowDownCircleIcon className="h-5 w-5 group-open:hidden" />
+                      <ArrowUpCircleIcon className="h-5 w-5 hidden group-open:block" />
                     </div>
                   </summary>
-                  <p className="md:text-xl text-lg">{item.answer}</p>
+                  <p className="text-2xl text-[#828280] font-light">{item.answer}</p>
                 </details>
               </div>
             ))}
