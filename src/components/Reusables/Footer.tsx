@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-5 py-10">
         <div className="grid grid-cols-3 gap-8 max-w-4xl mx-auto">
           {/* Products Column */}
-          <div>
+          <div className="text-[#F2EDED]">
             <h3 className="font-semibold mb-4">PRODUCTS</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-300 hover:text-white">App</a></li>
@@ -16,7 +16,7 @@ const Footer = () => {
           </div>
 
           {/* Company Column */}
-          <div>
+          <div className="text-[#F2EDED]">
             <h3 className="font-semibold mb-4">COMPANY</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-300 hover:text-white">Privacy Policy</a></li>
@@ -28,27 +28,27 @@ const Footer = () => {
 
           {/* Find Us On Column */}
           <div>
-            <h3 className="font-semibold mb-4">FIND US ON</h3>
+            <h3 className="font-semibold mb-4 text-[#F2EDED]">FIND US ON</h3>
             <div className="flex gap-4 mb-4">
               <a href="#" className="text-gray-300 hover:text-white">
-                <Image src="/telegram.svg" alt="Telegram" width={24} height={24} />
+                <Image src="/svg/tg.svg" alt="Telegram" width={24} height={24} />
               </a>
               <a href="#" className="text-gray-300 hover:text-white">
-                <Image src="/facebook.svg" alt="Facebook" width={24} height={24} />
+                <Image src="/svg/fb.svg" alt="Facebook" width={24} height={24} />
               </a>
               <a href="#" className="text-gray-300 hover:text-white">
-                <Image src="/reddit.svg" alt="Reddit" width={24} height={24} />
+                <Image src="/svg/reddit.svg" alt="Reddit" width={24} height={24} />
               </a>
             </div>
             <div className="flex gap-4">
               <a href="#" className="text-gray-300 hover:text-white">
-                <Image src="/medium.svg" alt="Medium" width={24} height={24} />
+                <Image src="/svg/medium.svg" alt="Medium" width={24} height={24} />
               </a>
               <a href="#" className="text-gray-300 hover:text-white">
-                <Image src="/twitter.svg" alt="Twitter" width={24} height={24} />
+                <Image src="/svg/twitter.svg" alt="Twitter" width={24} height={24} />
               </a>
               <a href="#" className="text-gray-300 hover:text-white">
-                <Image src="/instagram.svg" alt="Instagram" width={24} height={24} />
+                <Image src="/svg/instagram.svg" alt="Instagram" width={24} height={24} />
               </a>
             </div>
           </div>
