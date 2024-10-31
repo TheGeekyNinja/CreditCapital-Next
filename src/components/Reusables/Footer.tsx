@@ -65,7 +65,7 @@ const Footer = () => {
             The information found on this website isn&apos;t applicable to a U.S. Person, residents of Canada or other Restricted Person and shall not be used or accessed in any country or jurisdiction where such use or access is not permitted under applicable law.
           </p>
           <p className="text-[#CCCCCC] text-sm text-left max-w-4xl mx-auto mb-8">
-            Bondex is not an investment advisory service, or a registered investment advisor, or a trust, or a fund or broker-dealer and does not purport to tell or suggest which digital assets customers should buy or are themselves. Nothing on this Website shall be deemed to constitute a prospectus of any sort or a solicitation for investment, nor does it in any way pertain to an offering or a solicitation of an offer to buy any securities in any jurisdiction. The information on the Website is not composed in accordance with, and is not subject to, laws or regulations of any jurisdiction which prohibit or in any manner restrict transactions in respect to, or with use of, virtual currencies.
+            Photonics Gold is not an investment advisory service, or a registered investment advisor, or a trust, or a fund or broker-dealer and does not purport to tell or suggest which digital assets customers should buy or are themselves. Nothing on this Website shall be deemed to constitute a prospectus of any sort or a solicitation for investment, nor does it in any way pertain to an offering or a solicitation of an offer to buy any securities in any jurisdiction. The information on the Website is not composed in accordance with, and is not subject to, laws or regulations of any jurisdiction which prohibit or in any manner restrict transactions in respect to, or with use of, virtual currencies.
           </p>
         </div>
       </div>
@@ -73,7 +73,7 @@ const Footer = () => {
       {/* Copyright */}
       <div className="border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
-          <p className="text-sm text-gray-400">© 2023, Capitaliance Ltd. All Rights Reserved.</p>
+          <p className="text-sm text-gray-400">© 2023, Photonics Labs Ltd. All Rights Reserved.</p>
           <div className="flex gap-8">
             <a href="#" className="text-sm text-gray-400 hover:text-white">Terms of Use</a>
             <a href="#" className="text-sm text-gray-400 hover:text-white">Privacy Policy</a>

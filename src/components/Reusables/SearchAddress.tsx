@@ -83,7 +83,7 @@ const SearchAddress: React.FC<SearchAddressProps> = ({ onSearch }) => {
         onChange={handleInputChangeEvent}
         onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
         placeholder="Enter ENS or Wallet Address"
-        className={`p-3 border rounded-full w-full ${error ? 'border-red-500' : ''}`}
+        className={`p-3 border rounded-full text-black w-full ${error ? 'border-red-500' : ''}`}
       />
       {suggestions.length > 0 && (
         <ul className="bg-white rounded-lg shadow-md">
@@ -91,7 +91,7 @@ const SearchAddress: React.FC<SearchAddressProps> = ({ onSearch }) => {
             <li
               key={suggestion}
               onClick={() => selectSuggestion(suggestion)}
-              className="cursor-pointer p-2 hover:bg-gray-200"
+              className="cursor-pointer p-2 hover:bg-gray-200 text-black"
             >
               {suggestion}
             </li>

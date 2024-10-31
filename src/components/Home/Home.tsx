@@ -2,7 +2,7 @@ import { ArrowUpCircleIcon } from "@heroicons/react/24/solid";
 import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
-import content from "./Content.json";
+import content from "./content.json";
 
 const Home = () => {
   return (
@@ -117,7 +117,7 @@ const Home = () => {
                       {problem.heading}
                     </p>
                   </div>
-                  <p className="text-[#6B7280] ml-9 text-2xl mt-4 font-light leading-[40px]">
+                  <p className="text-[#6B7280] ml-9 text-2xl mt-4 font-light leading-[40px] text-justify">
                     {problem.text}
                   </p>
                 </div>
@@ -147,7 +147,7 @@ const Home = () => {
                       {item.heading}
                     </p>
                   </div>
-                  <p className="text-[#6B7280] ml-9 text-2xl mt-4 font-light leading-[40px]">
+                  <p className="text-[#6B7280] ml-9 text-2xl mt-4 font-light leading-[40px] text-justify">
                     {item.text}
                   </p>
                 </div>

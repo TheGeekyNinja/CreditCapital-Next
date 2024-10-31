@@ -48,7 +48,7 @@
     "description": [
       {
         "heading": "Tokenization",
-        "text": "Photonics' token, PHTG, derives value from a gold reserve through a relationship between our smart contracts and a trust. We are transferring the combined DCF gold reserves asset to a Wyoming LLC, whose equity securities will be tokenized, and we will promote it through a Private Placement offering under SEC Regulation D, Rule 506(c), and Regulation S for non-US investors."
+        "text": "Photonics' token, PHTG, gains value from its DCF gold reserve(s) through our smart contracts' relationship with a trust, who underwrites the combined DCF gold reserve(s) asset as a Wyoming LLC, tokenizing its equity securities, as the (“Issuer”), a limited liability company organized under the laws of the State of Wyoming, and has made a bond offering, through a Private Placement offering under SEC Regulation D, Rule 506(c), and Regulation S for non-US investors. This offering is for $6,500,000,000 aggregate principal amount, 8.00%, Asset-Backed (GNMA or Equivalent) Corporate Bonds, Series 2024-1 due 2034 (the “Bonds”), which will maintain the combined DCF gold reserves and maintain the liquidity depth of the Uniswap Liquidity Pool."
       },
       {
         "heading": "Gold-Ounce-Price Peg",
@@ -73,7 +73,7 @@
       {
         "icon": "/pie.png",
         "title": "Overcollateralization",
-        "description": "The amounts of actual gold backing your tokens are many times higher than the total token supply. Since the gold reserves in the mine have been appraised with a discounted cash flow (DCF) at a 90% rate, PHTG is heavily overcollateralized."
+        "description": "The amounts of actual gold value under management is many times higher than the total token supply. Since the gold reserves in the mine have been appraised with a discounted cash flow (DCF) at a 90% rate, PHTG is heavily overcollateralized."
       },
       {
         "icon": "/distribution.png",
@@ -83,34 +83,34 @@
     ]
   },
   "onboarding": {
-    "title": "Onboarding Assets",
+    "title": "Onboarding Tokenholders",
     "image": "/onboarding.png",
-    "description": "You, as an asset owner, bring your assets to Credit Capital. We take over from there, tokenizing your assets and issuing you an equivalent number of tokens",
-    "botDescription": "By tokenizing your assets with Credit Capital, you're not only enhancing your asset's liquidity but also opening up new avenues for revenue generation and expanding the potential investor pool. This ultimately leads to a better valuation of your asset and provides an innovative way to optimize your capital investments.",
+    "description": "Your avenue to buying PHTG tokens is the liquidity pool on Uniswap, a decentralized exchange where we have listed the Photonics Labs Gold Token.",
+    "botDescription": "",
     "steps": [
       {
-        "title": "Asset Introduction",
-        "description": "Your journey begins with introducing your assets to Credit Capital. As an asset owner, you will need to provide detailed information about your capital investment, such as the type of asset, its current value, and its revenue-generating history, if applicable."
+        "title": "Crypto Onramping",
+        "description": "Your journey begins with converting your capital to POL or Wrapped ETH on the Polygon network. This can most easily be done through a centralized cryptocurrency exchange. But if you're already holding crypto, it can be bridged over to polygon, depending on which network it's on."
       },
       {
-        "title": "Asset Evaluation",
-        "description": "Our team of seasoned finance and blockchain professionals will thoroughly evaluate your asset, determining its potential for tokenization and its potential value in the token market."
+        "title": "Bridging to Polygon",
+        "description": "If your centralized exchange supports the polygon network, this step does not apply. But if that's not the case, and you're already holding crypto, it could be bridged over to polygon, depending on which network it's on. The Photonics Gold Team can assist you with this process."
       },
       {
-        "title": "Tokenization Process",
-        "description": "Once your asset meets our evaluation criteria, we will move forward with the tokenization process. This involves digitally representing your asset as security tokens on the blockchain. Each token will embody a proportional ownership stake in your asset, thus democratizing access to your capital investment."
+        "title": "Connecting to Uniswap",
+        "description": "The trading pair (also called the liquidity pool) is available both through the Uniswap exchange interface on their website, and the dashboard on this website. In both cases, you will need to connect your ethereum/polygon wallet to the interface. This is how you login to the interface and send tokens."
       },
       {
-        "title": "Token Issuance",
-        "description": "After successful tokenization, you will be issued tokens equivalent to the value of your asset. You become the rightful owner of these tokens and can choose to trade or stake them in our liquidity pool."
+        "title": "Swapping Tokens",
+        "description": "You may buy PHTG tokens through this interface, without a counterparty or 'sell order'. The counterpartie(s) in this case are a combination of the liquidity pool itself and any previous transactors."
       },
       {
-        "title": "Asset Management",
-        "description": "As your asset is now part of the Credit Capital ecosystem, our expert team will oversee its management. This includes monitoring the performance of the tokenized asset, managing the liquidity pool, and ensuring timely revenue distribution among token holders."
+        "title": "Awaiting Unlock",
+        "description": "Your PHTG tokens will be locked in your walled after receipt, by the PHTG smart contract due to the vesting schedule. But starting from the time your wallet first receives PHTG, a timer starts, which unlocks 0.25% of the first amount recieved, per month, until it runs out of tokens to unlock. For example: if you bought 1,000 tokens from the LP and later bought another 25, the smart contract would unlock 2.5 of your tokens per month, until the full 1,025 had been freed up."
       },
       {
-        "title": "Regular Updates and Reports",
-        "description": "You will receive regular updates and detailed reports on the performance of your tokenized asset, revenue distributions, market trends, and valuable insights to help you make informed decisions regarding your token holdings."
+        "title": "Receiving the 1% AUM Revenue",
+        "description": "These dispersions take place as OTC transactions, and are usually paid in ETH."
       }
     ]
   },
