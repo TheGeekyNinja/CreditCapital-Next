@@ -200,7 +200,7 @@ const Home = () => {
         id="onboarding"
       >
         <h2 className="text-[#003366] leading-[113.38px] text-[83px] font-normal mb-4">
-          Onboarding <span className="text-[#0080FF]">Assets</span>
+          Onboarding <span className="text-[#0080FF]">Tokenholders</span>
         </h2>
         <p className="text-[#828280] leading-[32.78px] font-light text-2xl mb-16">
           {content.onboarding.description}
