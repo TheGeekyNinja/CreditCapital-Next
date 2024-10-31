@@ -195,7 +195,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
                 <h1 className="text-3xl font-bold">Wallet</h1>
                 <p className="text-gray-500">Address: {walletAddress}</p>
                 <p className="text-gray-500 text-lg">
-                  Total Balance: ${formatCurrency(totalPortfolioValue)}
+                  Total Balance: {formatCurrency(totalPortfolioValue)}
                 </p>
                 {isSearchedWallet && (
                   <div className="mt-2 w-1/2">
