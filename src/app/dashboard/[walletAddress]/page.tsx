@@ -36,8 +36,8 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
   const [loadingPortfolio, setLoadingPortfolio] = useState(true);
   const { address: loggedInAddress } = getAccount(config);
 
-  const AGT_TOKEN_ADDRESS =
-    process.env.NEXT_PUBLIC_AGT_TOKEN_ADDRESS as `0x${string}`;
+  const PHTG_TOKEN_ADDRESS =
+    process.env.NEXT_PUBLIC_PHTG_TOKEN_ADDRESS as `0x${string}`;
 
   const validWalletAddress =
     typeof walletAddress === "string" && walletAddress.startsWith("0x")
@@ -47,8 +47,8 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
   const isSearchedWallet = walletAddress !== loggedInAddress;
 
   const [balance, setBalance] = useState<string | undefined>(undefined);
-  const [agtBalance, setAgtBalance] = useState<string | undefined>(undefined);
-  const [agtPrice, setAgtPrice] = useState<number>(0);
+  const [phtgBalance, setPhtgBalance] = useState<string | undefined>(undefined);
+  const [phtgPrice, setPhtgPrice] = useState<number>(0);
 
   useEffect(() => {
     const fetchBalance = async () => {
@@ -70,7 +70,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
 
   // Fetch AGT token balance
   const { data: agtBalanceData } = useReadContract({
-    address: AGT_TOKEN_ADDRESS,
+    address: PHTG_TOKEN_ADDRESS,
     abi,
     functionName: "balanceOf",
     args: [validWalletAddress as `0x${string}`],
@@ -78,7 +78,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
 
   useEffect(() => {
     if (agtBalanceData) {
-      setAgtBalance(agtBalanceData.toString());
+      setPhtgBalance(agtBalanceData.toString());
     }
   }, [agtBalanceData]);
 
@@ -90,7 +90,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
           throw new Error("Failed to fetch gold price");
         }
         const data = await response.json();
-        setAgtPrice(data.price);
+        setPhtgPrice(data.price);
       } catch (error) {
         console.error("Error fetching gold price:", error);
       }
@@ -117,8 +117,8 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
         const maticCoin = data[0];
 
         const walletBalance = balance ? parseFloat(balance) : 0.0;
-        const agtTokenBalance = agtBalance
-          ? parseFloat(formatUnits(BigInt(agtBalance), 18))
+        const phtgTokenBalance = phtgBalance
+          ? parseFloat(formatUnits(BigInt(phtgBalance), 18))
           : 0.0;
 
         setPortfolioCoins([
@@ -135,10 +135,10 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
               "https://assets.coingecko.com/coins/images/4713/small/matic-token-icon.png",
           },
           {
-            id: "agt",
+            id: "phtg",
             name: "PHTG",
-            current_price: agtPrice,
-            holdings: agtTokenBalance,
+            current_price: phtgPrice,
+            holdings: phtgTokenBalance,
             symbol: "PHTG",
             price_change_percentage_24h: 0,
             image: "https://via.placeholder.com/40",
@@ -152,7 +152,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
     };
 
     fetchAllCoins();
-  }, [walletAddress, balance, agtBalance, agtPrice]);
+  }, [walletAddress, balance, phtgBalance, phtgPrice]);
 
   const handleWalletSearch = (newAddress: string) => {
     if (newAddress.startsWith("0x")) {
