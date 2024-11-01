@@ -3,8 +3,15 @@ import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import content from "./content.json";
-
+import SearchAddress from "../Reusables/SearchAddress";
+import { useRouter } from "next/navigation";
 const Home = () => {
+  const router = useRouter();
+  const handleWalletSearch = (newAddress: string) => {
+    if (newAddress.startsWith("0x")) {
+      router.push(`/dashboard/${newAddress}`);
+    }
+  };
   return (
     <>
       <div className={`${styles["banner-gradients"]} p-5 pt-20`}>
@@ -29,10 +36,13 @@ const Home = () => {
                   {content.banner.buttonText}
                 </a>
               </div>
+              <div>
+              <SearchAddress onSearch={handleWalletSearch} />
+            </div>
             </div>
             <div className="w-full">
               <div className="relative p-0">
-                <Image src="/goldB.png" alt="Phone" width={995} height={849} />
+                <Image src="/goldB.png" alt="PHTG" width={995} height={849} />
               </div>
             </div>
           </div>
@@ -200,7 +210,7 @@ const Home = () => {
         id="onboarding"
       >
         <h2 className="text-[#003366] leading-[113.38px] text-[83px] font-normal mb-4">
-          Onboarding <span className="text-[#0080FF]">Assets</span>
+          Onboarding <span className="text-[#0080FF]">Tokenholders</span>
         </h2>
         <p className="text-[#828280] leading-[32.78px] font-light text-2xl mb-16">
           {content.onboarding.description}

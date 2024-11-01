@@ -7,6 +7,7 @@ import GoToTop from '@/components/Reusables/GoToTop';
 import ConditionalNavbar from '@/components/ConditionalNavbar';
 import ContextProvider from '@/context';
 import { headers } from 'next/headers' // added
+import StickyVault  from '@/components/Reusables/StickyVault';
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -27,10 +28,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
       <ContextProvider cookies={cookies}>
-          <ConditionalNavbar />
-          <main>{children}</main>
-          <GoToTop />
-          <Footer />
+        <StickyVault />
+        <ConditionalNavbar />
+        <main>{children}</main>
+        <GoToTop />
+        <Footer />
         </ContextProvider>
       </body>
     </html>
