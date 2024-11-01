@@ -5,19 +5,11 @@ import Image from "next/image"; // For optimized image loading in Next.js
 import { ConnectButton } from "./ConnectButton";
 import Link from "next/link";
 import { useAppKitAccount } from "@reown/appkit/react";
-import { useRouter } from "next/navigation"; // Using next/navigation
-import SearchAddress from "./SearchAddress";
 
 const Navbar = () => {
-  const router = useRouter();
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
   const { address, isConnected } = useAppKitAccount();
   const toggleSidebar = () => setSidebarIsOpen(!sidebarIsOpen);
-  const handleWalletSearch = (newAddress: string) => {
-    if (newAddress.startsWith("0x")) {
-      router.push(`/dashboard/${newAddress}`);
-    }
-  };
 
   return (
     <div className="p-5 absolute w-full text-white">
@@ -37,9 +29,6 @@ const Navbar = () => {
           <Link href="#about">About</Link>
           <Link href="#benefits">Benefits</Link>
           <Link href="#faq">FAQ</Link>
-        </div>
-        <div className="mt-4 flex w-full justify-end text-dark">
-          <SearchAddress onSearch={handleWalletSearch} />
         </div>
         <div className="items-center gap-3 flex">
           <div className="py-2 px-4 rounded-full w-fit text-[#003366] text-xs sm:text-base">

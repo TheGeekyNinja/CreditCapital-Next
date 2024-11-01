@@ -3,8 +3,15 @@ import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import content from "./content.json";
-
+import SearchAddress from "../Reusables/SearchAddress";
+import { useRouter } from "next/navigation";
 const Home = () => {
+  const router = useRouter();
+  const handleWalletSearch = (newAddress: string) => {
+    if (newAddress.startsWith("0x")) {
+      router.push(`/dashboard/${newAddress}`);
+    }
+  };
   return (
     <>
       <div className={`${styles["banner-gradients"]} p-5 pt-20`}>
@@ -29,10 +36,13 @@ const Home = () => {
                   {content.banner.buttonText}
                 </a>
               </div>
+              <div>
+              <SearchAddress onSearch={handleWalletSearch} />
+            </div>
             </div>
             <div className="w-full">
               <div className="relative p-0">
-                <Image src="/goldB.png" alt="Phone" width={995} height={849} />
+                <Image src="/goldB.png" alt="PHTG" width={995} height={849} />
               </div>
             </div>
           </div>
