@@ -41,8 +41,9 @@ const StickyVault = () => {
   console.log('Total Value USD:', totalValueUSD);
 
   return (
-    <div className="bg-yellow-300 text-center py-1 text-sm font-bold">
-      Vault Value: ${totalValueUSD.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+    <div className="bg-[#FFE79F] text-center py-1 text-lg font-medium text-[#666666]">
+      Current Vault Holdings:
+      <span className="text-black text-lg font-bold">${totalValueUSD.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
     </div>
   );
 }
