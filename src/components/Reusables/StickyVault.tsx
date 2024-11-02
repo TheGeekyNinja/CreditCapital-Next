@@ -37,17 +37,19 @@ const StickyVault = () => {
   const phtgAmount = phtgBalance ? Number(formatUnits(BigInt(hardcodedPhtgBalance), 18)) : 0;
   const totalValueUSD = phtgAmount * goldPrice;
 
-  console.log('PHTG Balance:', phtgAmount);
-  console.log('Gold Price:', goldPrice);
-  console.log('Total Value USD:', totalValueUSD);
 
   if (totalValueUSD === 0) {
     return null;
   } else {
     return (
-    <div className="bg-[#FFE79F] text-center py-1 text-lg font-medium text-[#666666]">
-      Current Vault Holdings:
-      <span className="text-black text-lg font-bold">${totalValueUSD.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+      <div className="bg-[#FFE79F] text-center py-2 px-4 sm:py-1 sm:px-6 text-sm sm:text-lg font-medium text-[#666666]">
+        Current Vault Holdings:
+        <span className="text-black text-base sm:text-lg font-bold block sm:inline">
+          ${totalValueUSD.toLocaleString(undefined, {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          })}
+        </span>
       </div>
     );
   }

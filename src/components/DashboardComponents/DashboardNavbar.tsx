@@ -1,4 +1,3 @@
-import { ConnectButton } from "../Reusables/ConnectButton";
 import Link from 'next/link';
 
 const DashboardNavbar = () => {
@@ -8,7 +7,7 @@ const DashboardNavbar = () => {
         Home
       </Link>
       <div className="flex items-center space-x-4">
-        <ConnectButton />
+        <w3m-button label="Login to Connect" balance="hide"  />
       </div>
     </header>
   );
