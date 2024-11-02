@@ -10,7 +10,8 @@ import { useReadContract } from "wagmi";
 import { formatUnits } from "viem";
 import { config } from "@/config";
 import { abi } from "@/config/abi";
-import { formatCurrency } from "@/utils/formatter";
+import { formatCurrency, truncateAddress } from "@/utils/formatter";
+import CopyAddress from "@/components/Reusables/CopyAddress";
 
 interface Coin {
   id: string;
@@ -33,11 +34,11 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
   const walletAddress = params.walletAddress;
 
   const [portfolioCoins, setPortfolioCoins] = useState<Coin[]>([]);
-  const [loadingPortfolio, setLoadingPortfolio] = useState(true);
+  const [loadingPortfolio, setLoadingPortfolio] = useState<boolean>(true);
   const { address: loggedInAddress } = getAccount(config);
 
-  const PHTG_TOKEN_ADDRESS =
-    process.env.NEXT_PUBLIC_PHTG_TOKEN_ADDRESS as `0x${string}`;
+  const PHTG_TOKEN_ADDRESS = process.env
+    .NEXT_PUBLIC_PHTG_TOKEN_ADDRESS as `0x${string}`;
 
   const validWalletAddress =
     typeof walletAddress === "string" && walletAddress.startsWith("0x")
@@ -68,7 +69,6 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
     fetchBalance();
   }, [validWalletAddress]);
 
-  // Fetch AGT token balance
   const { data: agtBalanceData } = useReadContract({
     address: PHTG_TOKEN_ADDRESS,
     abi,
@@ -99,8 +99,10 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
     fetchGoldPrice();
   }, []);
 
-  const totalPortfolioValue = portfolioCoins
-    .reduce((total, coin) => total + coin.current_price * coin.holdings, 0);
+  const totalPortfolioValue = portfolioCoins.reduce(
+    (total, coin) => total + coin.current_price * coin.holdings,
+    0
+  );
 
   useEffect(() => {
     const fetchAllCoins = async () => {
@@ -161,44 +163,59 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
   };
 
   return (
-    <div className="flex-1 bg-gray-100 h-screen">
-      <section className="px-8 pt-8">
-        <div className="grid grid-cols-2 items-center">
+    <div className="flex-1 bg-gray-100 min-h-screen p-4">
+      <section className="px-4 sm:px-8 pt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 items-center gap-4">
           <div className="flex items-center">
             {isSearchedWallet ? (
               <button
                 onClick={() => router.back()}
-                className="text-2xl font-bold"
+                className="text-xl sm:text-2xl font-bold"
               >
                 Go Back
               </button>
             ) : (
-              <h1 className="text-2xl font-bold">My Wallet</h1>
+              <h1 className="text-xl sm:text-2xl font-bold">My Wallet</h1>
             )}
           </div>
-          <div className="justify-end flex">
+          <div className="flex justify-end mt-4 sm:mt-0">
             <SearchAddress onSearch={handleWalletSearch} />
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-[20px] shadow-sm mb-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
+        <div className="bg-white p-4 sm:p-4 rounded-[20px] shadow-sm mb-6 mt-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between">
+            <div className="flex items-center mb-4 sm:mb-0">
               <Image
                 src="https://via.placeholder.com/600/24f355e"
                 alt="Profile Image"
-                width={80}
-                height={80}
-                className="rounded-full mr-4"
+                width={60}
+                height={60}
+                className="rounded-full sm:mr-4"
               />
               <div>
-                <h1 className="text-3xl font-bold">Wallet</h1>
-                <p className="text-gray-500">Address: {walletAddress}</p>
-                <p className="text-gray-500 text-lg">
+                <h1 className="text-2xl sm:text-3xl font-bold">Wallet</h1>
+                <div className="flex items-center gap-2">
+                  {/* Truncated address for mobile */}
+                  <p className="text-gray-500 text-sm sm:hidden">
+                    Address:{" "}
+                    <span className="inline-block">
+                      {truncateAddress(walletAddress)}
+                    </span>
+                  </p>
+
+                  {/* Full address for larger screens */}
+                  <p className="text-gray-500 text-sm hidden sm:block">
+                    Address:{" "}
+                    <span className="inline-block">{walletAddress}</span>
+                  </p>
+                  <CopyAddress address={walletAddress} />
+                </div>
+                <p className="text-gray-500 text-sm sm:text-lg">
                   Total Balance: {formatCurrency(totalPortfolioValue)}
                 </p>
                 {isSearchedWallet && (
-                  <div className="mt-2 w-1/2">
+                  <div className="mt-2">
                     <a
                       href={`https://polygonscan.com/address/${walletAddress}`}
                       target="_blank"
@@ -214,10 +231,10 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 space-x-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h2 className="text-lg font-bold mb-4">Assets</h2>
-            <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 mb-6">
+            <h2 className="text-lg sm:text-xl font-bold mb-4">Assets</h2>
+            <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {portfolioCoins.map((coin) => (
                 <DashboardCard
                   key={coin.id}
@@ -229,10 +246,10 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
             </section>
           </div>
           <div>
-            <h2 className="text-lg font-bold mb-4">
+            <h2 className="text-lg sm:text-xl font-bold mb-4">
               {isSearchedWallet ? "Portfolio" : "My Portfolio"}
             </h2>
-            <section className="bg-white p-6 rounded-[20px] shadow-sm max-h-80 overflow-auto">
+            <section className="bg-white p-4 sm:p-6 rounded-[20px] shadow-sm max-h-80 overflow-auto">
               {loadingPortfolio ? (
                 <div>Loading Assets...</div>
               ) : (
