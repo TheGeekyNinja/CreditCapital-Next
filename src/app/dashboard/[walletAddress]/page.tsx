@@ -196,15 +196,12 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
               <div>
                 <h1 className="text-2xl sm:text-3xl font-bold">Wallet</h1>
                 <div className="flex items-center gap-2">
-                  {/* Truncated address for mobile */}
                   <p className="text-gray-500 text-sm sm:hidden">
                     Address:{" "}
                     <span className="inline-block">
                       {truncateAddress(walletAddress)}
                     </span>
                   </p>
-
-                  {/* Full address for larger screens */}
                   <p className="text-gray-500 text-sm hidden sm:block">
                     Address:{" "}
                     <span className="inline-block">{walletAddress}</span>
