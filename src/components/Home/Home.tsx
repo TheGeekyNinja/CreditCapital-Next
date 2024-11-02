@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css";
 import content from "./content.json";
 import SearchAddress from "../Reusables/SearchAddress";
 import { useRouter } from "next/navigation";
+
 const Home = () => {
   const router = useRouter();
   const handleWalletSearch = (newAddress: string) => {
@@ -12,23 +13,24 @@ const Home = () => {
       router.push(`/dashboard/${newAddress}`);
     }
   };
+
   return (
     <>
       <div className={`${styles["banner-gradients"]} p-5 pt-20`}>
         <div className="max-w-[100rem] mx-auto">
           {/* Section 1 */}
           <div className="flex flex-col md:flex-row items-center gap-10 mt-12">
-            <div className="flex flex-col gap-8 w-full text-white">
-              <p className="text-[83px] leading-[87px] -mb-5">
+            <div className="flex flex-col gap-8 w-full text-white text-center md:text-left">
+              <p className="text-[40px] md:text-[83px] leading-[1.2]">
                 {content.banner.title}
               </p>
-              <p className="text-[83px] leading-[87px] text-[#c2c2c2]">
+              <p className="text-[40px] md:text-[83px] leading-[1.2] text-[#c2c2c2]">
                 {content.banner.subtitle}
               </p>
-              <p className="text-[34px] leading-[46.44px]">
+              <p className="text-[20px] md:text-[34px] leading-[1.5]">
                 {content.banner.description}
               </p>
-              <div className="flex gap-3 items-center">
+              <div className="flex justify-center md:justify-start gap-3 items-center">
                 <a
                   href="#the-problem"
                   className="py-2 px-4 cursor-pointer rounded-full w-fit bg-yellow-400 text-[#828280]"
@@ -37,12 +39,18 @@ const Home = () => {
                 </a>
               </div>
               <div>
-              <SearchAddress onSearch={handleWalletSearch} />
+                <SearchAddress onSearch={handleWalletSearch} />
+              </div>
             </div>
-            </div>
-            <div className="w-full">
+            <div className="w-full justify-center hidden md:flex">
               <div className="relative p-0">
-                <Image src="/goldB.png" alt="PHTG" width={995} height={849} />
+                <Image
+                  src="/goldB.png"
+                  alt="PHTG"
+                  width={995}
+                  height={849}
+                  className="w-full h-auto"
+                />
               </div>
             </div>
           </div>
@@ -53,37 +61,39 @@ const Home = () => {
       <div className="px-5 py-20" id="about">
         <div className="max-w-[100rem] mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-10 shadow-lg rounded-xl">
-            <div className="flex flex-col gap-5 w-full p-5">
+            <div className="flex flex-col gap-5 w-full p-5 text-center md:text-left">
               <p className="md:text-3xl text-2xl text-[#003366]">
                 {content.about.description}
               </p>
             </div>
-            <Image
-              src="/tech_blue.png"
-              className="md:w-full w-80"
-              alt="Tech Blue"
-              width={640}
-              height={480}
-            />
+            <div className="flex justify-center w-full">
+              <Image
+                src="/tech_blue.png"
+                alt="Tech Blue"
+                width={640}
+                height={480}
+                className="md:w-full w-auto"
+              />
+            </div>
           </div>
         </div>
       </div>
 
       {/* Section 4 */}
       <div className="px-5 py-20">
-        <div className=" mx-auto text-center">
-          <p className="text-[83px] text-[#003366]">
+        <div className="mx-auto text-center">
+          <p className="text-[40px] md:text-[83px] text-[#003366]">
             {content.PHTG.title}
           </p>
-          <div className="flex sm:flex-row flex-col gap-5 my-20">
+          <div className="flex flex-wrap justify-center sm:flex-row flex-col gap-5 my-20">
             {content.PHTG.features.map((feature, index) => (
               <div
                 key={index}
-                className="flex flex-col gap-5 w-full p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50"
+                className="flex flex-col gap-5 w-full sm:w-1/2 md:w-1/3 p-5 hover:shadow duration-100 rounded-md hover:bg-gray-50"
               >
                 <Image
                   src={feature.icon}
-                  className="h-40 w-fit mx-auto"
+                  className="h-40 w-auto mx-auto"
                   alt={feature.title}
                   width={160}
                   height={160}
@@ -91,31 +101,33 @@ const Home = () => {
                 <p className="text-[#003366] font-semibold text-xl">
                   {feature.title}
                 </p>
-                <p className="text-[#828280] align-middle">
-                  {feature.description}
-                </p>
+                <p className="text-[#828280]">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      {/* Problem Section */}
       <div className="px-5 py-20 bg-[#EAE9E999]" id="the-problem">
         <div className="max-w-[100rem] mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-10">
-            <Image
-              src={content.problem.image}
-              className="md:w-full w-80"
-              alt="Futuristic globe with servers"
-              width={640}
-              height={480}
-            />
-            <div className="flex flex-col gap-6 w-full">
-              <p className="text-[#003366] text-[83px] px-6 font-light">
+            <div className="flex justify-center w-full">
+              <Image
+                src={content.problem.image}
+                alt="Futuristic globe with servers"
+                width={640}
+                height={480}
+                className="md:w-full w-auto"
+              />
+            </div>
+            <div className="flex flex-col gap-6 w-full text-center md:text-left">
+              <p className="text-[#003366] text-[40px] md:text-[83px] font-light">
                 {content.problem.title}
               </p>
               {content.problem.description.map((problem, index) => (
                 <div key={index}>
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-col md:flex-row items-center gap-3">
                     <Image
                       src="/check.png"
                       alt="Check"
@@ -123,11 +135,11 @@ const Home = () => {
                       height={24}
                       className="text-blue-500"
                     />
-                    <p className="text-[#003366] text-3xl font-medium">
+                    <p className="text-[#003366] text-2xl font-medium">
                       {problem.heading}
                     </p>
                   </div>
-                  <p className="text-[#6B7280] ml-9 text-2xl mt-4 font-light leading-[40px] text-justify">
+                  <p className="text-[#6B7280] text-lg md:text-2xl mt-4 font-light leading-relaxed text-justify">
                     {problem.text}
                   </p>
                 </div>
@@ -136,16 +148,18 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="px-5 py-20" id="the-solution">
+
+      {/* Solution Section */}
+      <div className="px-8 py-20" id="the-solution">
         <div className="max-w-[100rem] mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-10">
-            <div className="flex flex-col gap-5 w-full">
-              <p className="text-[#003366] text-[83px] font-light px-6">
+            <div className="flex flex-col gap-5 w-full text-center md:text-left">
+              <p className="text-[#003366] text-[40px] md:text-[83px] font-light">
                 {content.solution.title}
               </p>
               {content.solution.description.map((item, index) => (
                 <div key={index}>
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-col md:flex-row items-center gap-3">
                     <Image
                       src="/check.png"
                       alt="Check"
@@ -153,38 +167,44 @@ const Home = () => {
                       height={24}
                       className="text-blue-500"
                     />
-                    <p className="text-[#003366] text-3xl font-medium">
+                    <p className="text-[#003366] text-2xl font-medium">
                       {item.heading}
                     </p>
                   </div>
-                  <p className="text-[#6B7280] ml-9 text-2xl mt-4 font-light leading-[40px] text-justify">
+                  <p className="text-[#6B7280] text-lg md:text-2xl mt-4 font-light leading-relaxed text-justify">
                     {item.text}
                   </p>
                 </div>
               ))}
             </div>
-            <Image
-              src={content.solution.image}
-              className="md:w-full w-80"
-              alt="Pay Now Phone"
-              width={640}
-              height={480}
-            />
+            <div className="flex justify-center w-full">
+              <Image
+                src={content.solution.image}
+                alt="Pay Now Phone"
+                width={640}
+                height={480}
+                className="md:w-full w-auto"
+              />
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Benefits Section */}
       <div
         className="px-5 py-20 benefits_banner relative bg-black"
         id="benefits"
       >
         <div className="max-w-[70rem] mx-auto text-center z-20 relative">
-          <p className="text-[83px] text-[#53a9ff]">{content.benefits.title}</p>
-          <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 my-20 text-white">
+          <p className="text-[40px] md:text-[83px] text-[#53a9ff]">
+            {content.benefits.title}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 my-20 text-white">
             {content.benefits.features.map((benefit, index) => (
               <div key={index} className="flex flex-col gap-5 px-8">
                 <Image
                   src={benefit.icon}
-                  className="h-40 w-fit mx-auto"
+                  className="h-40 w-auto mx-auto"
                   alt={benefit.title}
                   width={160}
                   height={160}
@@ -204,26 +224,27 @@ const Home = () => {
           fill={true}
         />
       </div>
+
       {/* Onboarding */}
       <div
-        className="flex flex-col items-center text-center max-w-6xl mx-auto py-20"
+        className="flex flex-col items-center text-center max-w-6xl px-8 mx-auto py-20"
         id="onboarding"
       >
-        <h2 className="text-[#003366] leading-[113.38px] text-[83px] font-normal mb-4">
+        <h2 className="text-[#003366] leading-[1.1] text-[40px] md:text-[83px] font-normal mb-4">
           Onboarding <span className="text-[#0080FF]">Tokenholders</span>
         </h2>
-        <p className="text-[#828280] leading-[32.78px] font-light text-2xl mb-16">
+        <p className="text-[#828280] leading-relaxed font-light text-lg md:text-2xl mb-16">
           {content.onboarding.description}
         </p>
-        <div className="grid grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {/* First 3 steps in a row */}
           <div className="flex flex-col gap-8">
             {content.onboarding.steps.slice(0, 3).map((step, index) => (
               <div key={index} className="max-w-md text-right">
-                <h3 className="text-[#003366] text-xl font-semibold mb-2">
+                <h3 className="text-[#003366] text-lg md:text-xl font-semibold mb-2">
                   {step.title}
                 </h3>
-                <p className="text-[#6B7280] text-base leading-relaxed">
+                <p className="text-[#6B7280] text-base md:text-lg leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -245,27 +266,27 @@ const Home = () => {
           <div className="flex flex-col gap-8">
             {content.onboarding.steps.slice(3).map((step, index) => (
               <div key={index} className="max-w-md text-left">
-                <h3 className="text-[#003366] text-xl font-semibold mb-2">
+                <h3 className="text-[#003366] text-lg md:text-xl font-semibold mb-2">
                   {step.title}
                 </h3>
-                <p className="text-[#6B7280] text-base leading-relaxed">
+                <p className="text-[#6B7280] text-base md:text-lg leading-relaxed">
                   {step.description}
                 </p>
               </div>
             ))}
           </div>
         </div>
-        <p className="text-[#6B7280] text-2xl leading-[30px] font-light">
+        <p className="text-[#6B7280] text-lg md:text-2xl leading-relaxed font-light">
           {content.onboarding.botDescription}
         </p>
       </div>
+
       {/* FAQ */}
-      <div className="px-5 py-20 bg-[#FBFBFB]" id="faq">
+      <div className="px-8 py-20 bg-[#FBFBFB]" id="faq">
         <div className="max-w-[100rem] mx-auto">
-          <p className="text-[83px] mb-3 text-center text-[#003366]">
+          <p className="text-[40px] md:text-[83px] mb-3 text-center text-[#003366]">
             Frequently asked questions
           </p>
-          <br />
           <div className="flex flex-col gap-10">
             {content.faq.map((item, index) => (
               <div key={index} className="flex gap-3 items-start">
@@ -273,14 +294,16 @@ const Home = () => {
                   {index + 1}
                 </div>
                 <details className="w-full group">
-                  <summary className="group-open:text-[#003366] text-[#555555] font-medium text-3xl flex justify-between items-center w-full mb-5">
+                  <summary className="group-open:text-[#003366] text-[#555555] font-medium text-lg md:text-3xl flex justify-between items-center w-full mb-5">
                     <p>{item.question}</p>
                     <div className="expand-arrow rounded-full p-1">
                       <ArrowDownCircleIcon className="h-5 w-5 group-open:hidden" />
                       <ArrowUpCircleIcon className="h-5 w-5 hidden group-open:block" />
                     </div>
                   </summary>
-                  <p className="text-2xl text-[#828280] font-light">{item.answer}</p>
+                  <p className="text-base md:text-2xl text-[#828280] font-light">
+                    {item.answer}
+                  </p>
                 </details>
               </div>
             ))}
