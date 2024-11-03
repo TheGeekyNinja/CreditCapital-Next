@@ -11,12 +11,16 @@ const StickyVault = () => {
   const [goldPrice, setGoldPrice] = useState<number>(0);
 
   const hardcodedPhtgBalance = "744444000000000000000000";
-  const { data: phtgBalance } = useReadContract({
+  const { data: phtgBalance, error: phtgBalanceError } = useReadContract({
     address: PHTG_TOKEN_ADDRESS,
     abi,
     functionName: "balanceOf",
     args: [VAULT_ADDRESS],
   });
+
+  if (phtgBalanceError) {
+    console.error("Error fetching PHTG balance:", phtgBalanceError);
+  }
 
   useEffect(() => {
     const fetchGoldPrice = async () => {
