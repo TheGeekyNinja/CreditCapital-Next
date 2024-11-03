@@ -37,8 +37,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
   const [loadingPortfolio, setLoadingPortfolio] = useState<boolean>(true);
   const { address: loggedInAddress } = getAccount(config);
 
-  const PHTG_TOKEN_ADDRESS = process.env
-    .NEXT_PUBLIC_PHTG_TOKEN_ADDRESS as `0x${string}`;
+  const PHTG_TOKEN_ADDRESS = process.env.NEXT_PUBLIC_PHTG_TOKEN_ADDRESS as `0x${string}`;
 
   const validWalletAddress =
     typeof walletAddress === "string" && walletAddress.startsWith("0x")
@@ -75,6 +74,8 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
     functionName: "balanceOf",
     args: [validWalletAddress as `0x${string}`],
   });
+  console.log(phtgPrice)
+  console.log(phtgBalance)
 
   useEffect(() => {
     if (agtBalanceData) {
