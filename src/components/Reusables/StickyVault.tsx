@@ -6,10 +6,11 @@ import { abi } from "@/config/abi";
 
 const StickyVault = () => {
   const VAULT_ADDRESS = process.env.NEXT_PUBLIC_VAULT_ADDRESS as `0x${string}`;
-  const PHTG_TOKEN_ADDRESS = process.env.NEXT_PUBLIC_PHTG_TOKEN_ADDRESS as `0x${string}`;
-  const [goldPrice, setGoldPrice] = useState(0);
+  const PHTG_TOKEN_ADDRESS = process.env
+    .NEXT_PUBLIC_PHTG_TOKEN_ADDRESS as `0x${string}`;
+  const [goldPrice, setGoldPrice] = useState<number>(0);
 
-  const hardcodedPhtgBalance = 744444000000000000000000;
+  const hardcodedPhtgBalance = "744444000000000000000000";
   const { data: phtgBalance } = useReadContract({
     address: PHTG_TOKEN_ADDRESS,
     abi,
@@ -33,10 +34,11 @@ const StickyVault = () => {
 
     fetchGoldPrice();
   }, []);
-
-  const phtgAmount = phtgBalance ? Number(formatUnits(BigInt(hardcodedPhtgBalance), 18)) : 0;
+  const phtgAmount =
+    phtgBalance !== undefined
+      ? Number(formatUnits(BigInt(phtgBalance), 18))
+      : Number(formatUnits(BigInt(hardcodedPhtgBalance), 18));
   const totalValueUSD = phtgAmount * goldPrice;
-
 
   if (totalValueUSD === 0) {
     return null;
@@ -45,7 +47,8 @@ const StickyVault = () => {
       <div className="bg-[#FFE79F] text-center py-2 px-4 sm:py-1 sm:px-6 text-sm sm:text-lg font-medium text-[#666666]">
         Current Vault Holdings:
         <span className="text-black text-base sm:text-lg font-bold block sm:inline">
-          ${totalValueUSD.toLocaleString(undefined, {
+          $
+          {totalValueUSD.toLocaleString(undefined, {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2,
           })}
