@@ -144,7 +144,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ params }) => {
             holdings: phtgTokenBalance,
             symbol: "PHTG",
             price_change_percentage_24h: 0,
-            image: "https://via.placeholder.com/40",
+            image: "/gold_flaticon.png",
           },
         ]);
       } catch (error) {
