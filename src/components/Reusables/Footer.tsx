@@ -111,7 +111,7 @@ const Footer = () => {
       <div>
         <div className="max-w-7xl mx-auto px-5 py-8">
           <div className="text-left max-w-4xl mx-auto mb-6 border-t border-[#838383] pt-6">
-            <Image src="/logo.png" alt="Logo" width={32} height={32} />
+            <Image src="/gold_flaticon.png" alt="Logo" width={32} height={32} />
           </div>
           <p className="text-[#CCCCCC] text-sm text-justify max-w-4xl mx-auto mb-6">
             The information found on this website isn&apos;t applicable to a
